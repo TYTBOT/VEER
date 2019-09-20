@@ -4872,7 +4872,9 @@ local text = [[
 Telegram ! 
 
 - Contact With Me By : 
-• @OFliine
+• @OFLIINE
+
+• @OOO2V
 ]] 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
@@ -7680,7 +7682,7 @@ zo = '*📮¦* العضــو » ❪ [@'..data.username_..'] ❫\n*📬¦ الا
 VEERBOT:srem(VEER_ID..'mutes'..msg.chat_id_,result.id_)   
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*📮¦* العضــو » ❪ [@'..data.username_..'] ❫\n*📬¦ الايـدي » ❪* `'..result.id_..'` ❫\n*🚸¦* بالتاكيد تم الغاء كتمه\n🍃'   
+zo = '*??¦* العضــو » ❪ [@'..data.username_..'] ❫\n*📬¦ الايـدي » ❪* `'..result.id_..'` ❫\n*🚸¦* بالتاكيد تم الغاء كتمه\n🍃'   
 VEERBOT:srem(VEER_ID..'mutes'..msg.chat_id_,result.id_)   
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
