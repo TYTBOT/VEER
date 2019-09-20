@@ -4868,18 +4868,18 @@ end
 end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[ 
-📤┇ مرحبا بك في سورسي فير
-  🏆┇ VEER SOURCE
-  ➖➖➖➖➖➖➖➖➖➖
+🚦⁞ مرحبا بك في سورس فير
 
-  ⏱┇ مدة تنصيب السورس لا تتعدى ال 5 ثوان بغض النضر عن سرعة السيرفر
-  ➖➖➖➖➖➖➖➖➖➖
-  🏆┇ [اضغط هنا لتنصيب](t.me/OFliine) 
-  🏷┇ [مطور السورس](t.me/OFliine) 
-  🚸┇ [تواصل المحظورين](t.me/OFliine) 
-  🔊┇ [قناة السورس](t.me/OFliine) 
-  🗂┇ [قناة التحديثات](t.me/OFliine) 
-  ➖➖➖➖➖➖➖➖➖➖
+📠⁞  طريقه التنصيب في الاسفل •
+
+[💰⁞  اضغط هنا لتنصيب السورس •](t.me/ofliine)
+
+
+[🗳⁞ مطور السورس •](t.me/ofliine)
+[🗳⁞ تواصل المحظورين •](ofliine)
+
+[🗳⁞ قناة السورس •](t.me/ofliine)
+[🗳⁞ قناة التحديثات •](t.me/ofliine)
 ]] 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
@@ -9316,7 +9316,7 @@ function py_username(extra, result, success)
 if result.id_ then
 local VEERrt = VEERBOT:get(VEER_ID.."Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if VEERrt == 'مميز' and is_mod(msg) then
-sendMention(msg,msg.chat_id_,'📮¦ العضو » {'..CatchNamertprtp(result.type_.user_.first_name_)..'}'..'\n📬¦ تم تنريله من ('..text1[1]..') هنا\n',result.id_)   
+sendMention(msg,msg.chat_id_,'📮¦ العضو » {'..CatchNamertprtp(result.type_.user_.first_name_)..'}'..'\n??¦ تم تنريله من ('..text1[1]..') هنا\n',result.id_)   
 VEERBOT:srem(VEER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 VEERBOT:del(VEER_ID.."Comd:New:rt:user:"..msg.chat_id_..result.id_)
 elseif VEERrt == 'ادمن' and is_monsh(msg) then 
