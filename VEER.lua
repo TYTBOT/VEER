@@ -138,7 +138,7 @@ SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 SUDOUSERNAME = sudos.USERNAME
 VEER_ID = sudos.token:match("(%d+)")  
-NAMEBOT = (VEERBOT:get(VEER_ID..'VEER:name') or 'عراق')
+NAMEBOT = (VEERBOT:get(VEER_ID..'VEER:name') or 'فير')
 bot_id = sudos.token:match("(%d+)")  
 chaneel = sudos.token 
 plugins = {}
@@ -1766,7 +1766,7 @@ local pvstart = VEERBOT:get(VEER_ID.."pvstart")
 if pvstart then    
 VEER_sendMsg(msg.sender_user_id_, 0, 1, ''..check_markdown(pvstart)..'', 1, "md")    
 else    
-VEER_sendMsg(msg.sender_user_id_, msg.id_, 1, '\n📬*¦* تم ارسال رسالتك الى المطور\n*📛¦* اشترك في قناة المطور \n*🚸¦* [اضغط هنا للدخول الى قناة](t.me/BECIQ) \n', 1, "md")    
+VEER_sendMsg(msg.sender_user_id_, msg.id_, 1, '\n📬*¦* تم ارسال رسالتك الى المطور\n*📛¦* اشترك في قناة المطور \n*🚸¦* [اضغط هنا للدخول الى قناة](t.me/ofliine) \n', 1, "md")    
 end     
 if not VEERBOT:sismember(VEER_ID.."usersbot",msg.chat_id_) then    
 VEERBOT:sadd(VEER_ID.."usersbot",msg.chat_id_)    
@@ -1985,7 +1985,7 @@ if text == "جلب رد التواصل 📚" and is_devtaha(msg) then if VEERBOT
 if text == "جلب كليشه ستارت 📚" and is_devtaha(msg) then  local start = VEERBOT:get(VEER_ID.."start:msgofstart1")  if start then VEER_sendMsg(msg.chat_id_, msg.id_, 1,''..check_markdown(start)..'', 1, 'md') else VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🎭¦ لم يتم وضع كليشه ستارت *\n', 1, 'md') end end
 if text == 'الاحصائيات 🔭' and is_devtaha(msg) then    local grall = VEERBOT:scard(VEER_ID.."botgps") or 0    local gradd = VEERBOT:scard(VEER_ID..'bot:gpsby:id') or 0    local uspv = VEERBOT:scard(VEER_ID.."usersbot") or 0    VEER_sendMsg(msg.chat_id_, msg.id_, 1,'\n*📬¦ عدد المجموعات المفعله ↫ ❪'..gradd..'❫\n💥¦ عدد المشتركين ↫ ❪'..uspv..'❫*\n✓', 1, 'md')   end
 if text=="اذاعه بالتوجيه 📬" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."bc:in:gropsfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮¦* ارسل لي التوجيه ليتم اذاعته للمجموعات\n✓", 1, "md")   end
-if text=="اذاعه خاص بالتوجيه 🔮" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."bc:in:pvfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮¦* ارسل لي التوجيه ليتم اذاعته للخاص\n✓", 1, "md")   end
+if text=="اذاعه خاص بالتوجيه 🔖" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."bc:in:pvfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮¦* ارسل لي التوجيه ليتم اذاعته للخاص\n✓", 1, "md")   end
 if text=="اذاعه عام بالتوجيه 💾" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."bc:in:allfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮¦* ارسل لي التوجيه ليتم اذاعته للكل\n✓", 1, "md")   end
 if text=="اذاعه 📡" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."bc:in:grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮¦* ارسل لي سواء كان » ❪ رساله , صوره , متحركه , ملصق  ❫ للاذاعه الى المجموعات\n✓", 1, "md")   end
 if text=="اذاعه للكل 📡" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."bc:in:all" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮¦* ارسل لي سواء كان » ❪ رساله , صوره , متحركه , ملصق  ❫ للاذاعه الى الكل\n✓", 1, "md")   end
@@ -4294,7 +4294,7 @@ end
 return false  end
 if kk.id_ then  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)  
-if tonumber(kk.id_) == tonumber(373906612) then
+if tonumber(kk.id_) == tonumber(972833270) then
 t = 'مطور السورس'
 elseif tonumber(kk.id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -4379,7 +4379,7 @@ end
 if text and text:match('كشف (%d+)') then 
 local iduser = text:match('كشف (%d+)')  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)  
-if tonumber(iduser) == tonumber(373906612) then
+if tonumber(iduser) == tonumber(972833270) then
 t = 'مطور السورس'
 elseif tonumber(iduser) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4484,7 +4484,7 @@ end
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 then  
 function id_by_reply(extra, result, success) 
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)  
-if tonumber(result.sender_user_id_) == tonumber(373906612) then
+if tonumber(result.sender_user_id_) == tonumber(972833270) then
 t = 'مطور السورس'
 elseif tonumber(result.sender_user_id_) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4591,7 +4591,7 @@ if not text:find('@') then
 function mention(extra, tes, success)
 if tes.content_.entities_[0].user_id_ then  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)  
-if tonumber(tes.content_.entities_[0].user_id_) == tonumber(373906612) then
+if tonumber(tes.content_.entities_[0].user_id_) == tonumber(972833270) then
 t = 'مطور السورس'
 elseif tonumber(tes.content_.entities_[0].user_id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -4864,17 +4864,7 @@ end
 end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[ 
-🎫┇اهلا بك في سورس عراق 🇮🇶┇
-
-🇮🇶┇[VEER TEAM](t.me/BECIQ) 
-
-☑️┇[قناه السورس](t.me/BECIQ)
-
-🔘┇[قناه شروحات سورس📍](t.me/BE_CIQ) 
-
-🔖┇ [لـ تنصيب سورس عراق☑️](t.me/BECIQ) 
-
-📮┇[لـ تواصل📩](t.me/Bec7bot) 
+📤┇ مرحبا بك في سورسي فير   🏆┇ VEER SOURCE   ➖➖➖➖➖➖➖➖➖➖    ⏱┇ مدة تنصيب السورس لا تتعدى ال 5 ثوان بغض النضر عن سرعة السيرفر   ➖➖➖➖➖➖➖➖➖➖   🏆┇ [اضغط هنا لتنصيب السورس](t.me/OFliine)    🏷┇ [مطور السورس](t.me/OFliine)    🚸┇ [تواصل المحظورين](t.me/OFliine)    🔊┇ [قناة السورس](t.me/OFliine)    🗂┇ [قناة التحديثات](t.me/OFliine)    ➖➖➖➖➖➖➖➖➖➖
 ]] 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
@@ -7035,6 +7025,23 @@ t = '*📬¦* لا يوجد ادمنيه في هاذه المجموعه'
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
+if text and text == "تاك للكل" then
+function tall(f1, f2)
+local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
+i = 0
+for k, v in pairs(f2.members_) do
+i = i + 1
+local user_info = VEERBOT:hgetall('user:'..v.user_id_)  
+if user_info and user_info.username then
+local username = user_info.username
+text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
+end
+end 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+print(text)
+end
+tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
+end
 if text == 'المميزين' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'vip:group'..msg.chat_id_)
 local t = '*📮¦ قائمه مميزين المجموعه *\n*ٴ━━━━━━━━━*\n' 
@@ -7986,7 +7993,7 @@ if text and text:match('^طرد (%d+)') then
 local user = text:match('طرد (%d+)')
 if is_mod(msg) or is_canban(msg) then
 if not is_owner(msg) and not is_canban(msg) and VEERBOT:get(VEER_ID..'LOCK:BAN:KICK'..msg.chat_id_) then 
-VEER_send(msg.chat_id_,msg.id_,"*📮¦ عذرا لا تستطيع الحظر لقد تم تعطيل { الحظر - الطرد } \n👨🏻‍✈️*")   
+VEER_send(msg.chat_id_,msg.id_,"*??¦ عذرا لا تستطيع الحظر لقد تم تعطيل { الحظر - الطرد } \n👨🏻‍✈️*")   
 return false  end 
 if VEERBOT:sismember(VEER_ID..'LOCK:BAN'..msg.chat_id_,msg.sender_user_id_) then
 VEER_send(msg.chat_id_,msg.id_,"*📮¦ تم وضع القيود عليك لا تستطيع { طرد او حظر } المستخدمين \n👨🏻‍✈️*")   
@@ -9028,7 +9035,7 @@ rtpa = 'الادمن'
 elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
-if tonumber(msg.sender_user_id_) == tonumber(373906612) then
+if tonumber(msg.sender_user_id_) == tonumber(972833270) then
 t = 'مطور السورس 🔱'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي 🍃'
