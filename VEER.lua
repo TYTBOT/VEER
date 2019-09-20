@@ -4868,18 +4868,11 @@ end
 end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[ 
-🚦⁞ مرحبا بك في سورس فير
+- Welcome To The Ofificial Source In 
+Telegram ! 
 
-📠⁞  طريقه التنصيب في الاسفل •
-
-[💰⁞  اضغط هنا لتنصيب السورس •](t.me/ofliine)
-
-
-[🗳⁞ مطور السورس •](t.me/ofliine)
-[🗳⁞ تواصل المحظورين •](ofliine)
-
-[🗳⁞ قناة السورس •](t.me/ofliine)
-[🗳⁞ قناة التحديثات •](t.me/ofliine)
+- Contact With Me By : 
+• @OFliine
 ]] 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
@@ -9801,7 +9794,7 @@ VEER_send(msg.chat_id_,msg.id_,"*📮¦ عذرا لا تستطيع منع » { �
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-VEER_send(msg.chat_id_,msg.id_,"*📮¦ المعرف غير صحيح \n👨🏻‍✈️*")   
+VEER_send(msg.chat_id_,msg.id_,"*📮¦ المعرف غير صحيح \n??🏻‍✈️*")   
 return false  
 end   
 VEERBOT:sadd(VEER_ID..'LOCK:LINKS'..msg.chat_id_,result.id_)     
