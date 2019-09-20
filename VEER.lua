@@ -36,7 +36,7 @@ end
 file:write(serialized)    
 file:close()  
 end  
-if not VEERBOT:get(DEV_VEER..":token") then
+if not VEERBOT:get(DEVVEER..":token") then
 io.write('\27[1;31m ↡ ارسل لي توكن البوت الان |\nSEND TOKEN FOR BOT : \27[0;39;49m')
 local token = io.read()
 if token ~= '' then
@@ -45,30 +45,30 @@ if res ~= 200 then
 print('\27[1;34m التوكن غير صحيح تاكد منه ثم ارسله |')
 else
 io.write('\27[1;34m تم حفظ التوكن بنجاح |\n27[0;39;49m')
-VEERBOT:set(DEV_VEER..":token",token)
+VEERBOT:set(DEVVEER..":token",token)
 end 
 else
 print('\27[1;34m لم يتم حفظ التوكن ارسل لي التوكن الان |')
 end 
 os.execute('lua VEER.lua')
 end
-if not VEERBOT:get(DEV_VEER..":SUDO:ID") then
+if not VEERBOT:get(DEVVEER..":SUDO:ID") then
 io.write('\27[1;31m ↡ ارسل ايدي مطور الاساسي |\n SEND ID FOR SIDO : \27[0;39;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
 io.write('\n\27[1;34m تم حفظ ايدي المطور |\n\27[0;39;49m')
-VEERBOT:set(DEV_VEER..":SUDO:ID",SUDOID)
+VEERBOT:set(DEVVEER..":SUDO:ID",SUDOID)
 else
 print('\n\27[1;34m لم يتم حفظ ايدي المطور |')
 end 
 os.execute('lua VEER.lua')
 end
-if not VEERBOT:get(DEV_VEER..":SUDO:USERNAME") then
+if not VEERBOT:get(DEVVEER..":SUDO:USERNAME") then
 io.write('\27[1;31m ↡ ارسل معرف المطور الاساسي |\n SEND ID FOR SIDO : \27[0;39;49m')
 local SUDOUSERNAME = io.read():gsub('@','')
 if SUDOUSERNAME ~= '' then
 io.write('\n\27[1;34m تم حفظ معرف المطور |\n\27[0;39;49m')
-VEERBOT:set(DEV_VEER..":SUDO:USERNAME",'@'..SUDOUSERNAME)
+VEERBOT:set(DEVVEER..":SUDO:USERNAME",'@'..SUDOUSERNAME)
 else
 print('\n\27[1;34m لم يتم حفظ معرف المطور |')
 end 
@@ -76,16 +76,16 @@ os.execute('lua VEER.lua')
 end
 local create_config_auto = function()
 config = {
-token = VEERBOT:get(DEV_VEER..":token"),
-SUDO = VEERBOT:get(DEV_VEER..":SUDO:ID"),
-USERNAME = VEERBOT:get(DEV_VEER..":SUDO:USERNAME"), }
+token = VEERBOT:get(DEVVEER..":token"),
+SUDO = VEERBOT:get(DEVVEER..":SUDO:ID"),
+USERNAME = VEERBOT:get(DEVVEER..":SUDO:USERNAME"), }
 create(config, "./requfiles/INFO.lua")   
 end
 create_config_auto()
 file = io.open("VEER.sh", "w")  
 file:write([[
 #!/bin/bash 
-token="]]..VEERBOT:get(DEV_VEER..":token")..[["
+token="]]..VEERBOT:get(DEVVEER..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 echo -e ""
@@ -124,10 +124,10 @@ if not f then
 AutoSet()  
 else   
 f:close()  
-VEERBOT:del(DEV_VEER..":token")
-VEERBOT:del(DEV_VEER..":SUDO:ID")
-VEERBOT:del(DEV_VEER..":SUDO:USERNAME")
-VEERBOT:del(DEV_VEER..":NAMEBOT")
+VEERBOT:del(DEVVEER..":token")
+VEERBOT:del(DEVVEER..":SUDO:ID")
+VEERBOT:del(DEVVEER..":SUDO:USERNAME")
+VEERBOT:del(DEVVEER..":NAMEBOT")
 end  
 local config = loadfile("./requfiles/INFO.lua")() 
 return config 
