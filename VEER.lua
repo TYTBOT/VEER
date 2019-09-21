@@ -290,9 +290,8 @@ if VEERBOT:get(VEER_ID..'text:ch:user') then
 local textchuser = VEERBOT:get(VEER_ID..'text:ch:user')
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '['..textchuser..']', 1, 'md')
 else
-chdeva = '\n*🚦 ⁞ لا تستطيع استخدام البوت ✓\n🎖 ⁞ عليك الاشتراك في قناة البوت\n🔖'
- معرف القناة  ↡\n* ['..tahauser..']\n✓'
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, chdeva, 1, 'md');
+chdeva = '\n*📮¦ لا تستطيع استخدام البوت 🍃\n📬¦ عليك الاشتراك في قناة البوت\n🔖¦ معرف القناة  ↡\n* ['..tahauser..']\n✓'
+IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, chdeva, 1, 'md');
 end
 elseif data.ok then
 return var
