@@ -8917,6 +8917,23 @@ end,nil)
 end,nil)
 end,nil)
 end
+if text and text == "تاك للكل" then
+function tall(f1, f2)
+local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
+i = 0
+for k, v in pairs(f2.members_) do
+i = i + 1
+local user_info = VEERBOT:hgetall('user:'..v.user_id_)  
+if user_info and user_info.username then
+local username = user_info.username
+text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
+end
+end 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+print(text)
+end
+tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
+end
 if text == 'عدد الاضافه' or text == 'شكد اضيف' or text == 'شكد العدد' then 
 local whatnumadded = (VEERBOT:get(VEER_ID..'setadd:'..msg.chat_id_) or 0) 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,"📇* ⁞* عدد الاضافات المطلوبه\n🚦* ⁞* *"..whatnumadded.."* اشخاص \n", 1, 'md') 
