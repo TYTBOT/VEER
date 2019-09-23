@@ -291,7 +291,7 @@ local textchuser = VEERBOT:get(VEER_ID..'text:ch:user')
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '['..textchuser..']', 1, 'md')
 else
 chdeva = '\n*📮¦ لا تستطيع استخدام البوت 🍃\n📬¦ عليك الاشتراك في قناة البوت\n🔖¦ معرف القناة  ↡\n* ['..tahauser..']\n✓'
-IRAQ_sendMsg(msg.chat_id_, msg.id_, 1, chdeva, 1, 'md');
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, chdeva, 1, 'md');
 end
 elseif data.ok then
 return var
@@ -10583,7 +10583,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🎖 ⁞ تم مسح {'..num..'} من ا
 end
 if text == 'صلاحيات الحظر' and is_owner(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'SET:BAN'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه اصحاب صلاحية الحظر *\n*ٴ━━━━━━━━━*\n' 
+local t = '*📮¦ قائمه اصحاب صلاحية الحظر *\n*ٴ━━━━━━━━━*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
@@ -10594,7 +10594,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🗳 ⁞* لا يوجد اعضاء لديهم صلاحيات الحظر في هاذه المجموعه' 
+t = '*📬¦* لا يوجد اعضاء لديهم صلاحيات الحظر في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
