@@ -862,6 +862,84 @@ end
 return VEER_sendMsg(msg.chat_id_, msg.id_, 1,pre_msg, 1, 'md')  
 end
 
+function add_file(msg,chat,ID_FILE,File_Name)
+if File_Name:match('.json') then
+if File_Name:lower():match('(%d+)') ~= VEER_ID:lower() then 
+VEER_sendMsg(chat,msg.id_,"*🚦⁞ هذا الملف ليس تابع لهذا السورس •*")   
+return false 
+end      
+local File = json:decode(https.request('https://api.telegram.org/bot' .. tokenbot .. '/getfile?file_id='..ID_FILE) ) 
+download_to_file('https://api.telegram.org/file/bot'..tokenbot..'/'..File.result.file_path, ''..File_Name) 
+VEER_sendMsg(chat,msg.id_,"*🚦⁞ جاري رفع الملف •*")   
+else
+VEER_sendMsg(chat,msg.id_,"*🚦⁞ غير صحيح •*")   
+end      
+local info_file = io.open('./'..VEER_ID..'.json', "r"):read('*a')
+local groups = JSON.decode(info_file)
+VEER_sendMsg(chat,msg.id_,"*🚦⁞ تم رفع النسخه بنجاح •\n🏗 ⁞ تم رفع اداريين المجموعات السابقين •\n🔐 ⁞ تم قفل جميع اوامر حمايه المجموعات •*")
+vardump(groups)
+for idg,v in pairs(groups.GP_BOT) do
+VEERBOT:sadd(VEER_ID.."bot:groups",idg)
+VEERBOT:set(VEER_ID.."bot:enable:"..idg,true)
+VEERBOT:setex(VEER_ID.."bot:charge:"..idg,86400,true)
+VEERBOT:sadd("VEER_ID:addg"..bot_id, idg)
+VEERBOT:set(VEER_ID..'editmsg'..idg,true)
+VEERBOT:set(VEER_ID..'bot:bots:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:bots:ban'..idg,true)
+VEERBOT:set(VEER_ID..'keed_bots'..idg,true)
+VEERBOT:set(VEER_ID..'anti-flood:'..idg,true)
+VEERBOT:set(VEER_ID..'bot:inline:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:photo:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:spam:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:video:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:gifs:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:music:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:voice:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:links:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:location:mute'..idg,true)
+VEERBOT:set(VEER_ID..'tags:lock'..idg,true)
+VEERBOT:set(VEER_ID..'bot:strict'..idg,true)
+VEERBOT:set(VEER_ID..'bot:document:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:hashtag:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:contact:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:webpage:mute'..idg,true)
+VEERBOT:set(VEER_ID..'bot:sticker:mute'..idg,true)
+VEERBOT:set(VEER_ID..'markdown:lock'..idg,true)
+VEERBOT:set(VEER_ID..'bot:forward:mute'..idg,true)
+if v.MNSH then
+for k,idmsh in pairs(v.MNSH) do
+VEERBOT:sadd(VEER_ID..'bot:monsh:'..idg,idmsh)  
+print('تم رفع '..k..' منشئين')
+end
+end
+if v.MDER then
+for k,idmder in pairs(v.MDER) do
+VEERBOT:sadd(VEER_ID..'bot:owners:'..idg,idmder)  
+print('تم رفع '..k..' مدراء')
+end
+end
+if v.MOD then
+for k,idmod in pairs(v.MOD) do
+vardump(idmod)
+VEERBOT:sadd(VEER_ID..'bot:momod:'..idg,idmod)  
+print('تم رفع '..k..' ادمنيه')
+end
+end
+if v.VIP then
+for k,idvip in pairs(v.VIP) do
+VEERBOT:sadd(VEER_ID..'bot:vipmem:'..idg,idvip)  
+print('تم رفع '..k..' مميزين')
+end
+end
+if v.linkgroup then
+if v.linkgroup ~= "" then
+VEERBOT:set(VEER_ID.."bot:group:link"..idg,v.linkgroup)   
+print('تم وضع رابط ')
+end
+end
+end
+end
+
 function match_plugin(msg, CMD, plugin, plugin_name)
 MSG_TEXT = Tepy_Text(CMD, text)
 if MSG_TEXT then
@@ -1996,12 +2074,10 @@ os.execute('rm -rf VEER.lua')
 os.execute("rm -fr plugins_/help_rep.lua")
 os.execute("rm -fr plugins_/ZHRFA.lua")
 os.execute("rm -fr plugins_/games.lua")
-os.execute("rm -fr plugins_/JSON_BOT.lua")
 os.execute('wget https://raw.githubusercontent.com/TYTBOT/VEER/master/VEER.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/help_rep.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/ZHRFA.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/games.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/JSON_BOT.lua') 
 sleep(0.5) 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚸* ⁞* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('VEER.lua')  
@@ -4230,12 +4306,10 @@ os.execute('rm -rf VEER.lua')
 os.execute("rm -fr plugins_/help_rep.lua")
 os.execute("rm -fr plugins_/ZHRFA.lua")
 os.execute("rm -fr plugins_/games.lua")
-os.execute("rm -fr plugins_/JSON_BOT.lua")
 os.execute('wget https://raw.githubusercontent.com/TYTBOT/VEER/master/VEER.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/help_rep.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/ZHRFA.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/games.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/JSON_BOT.lua') 
 sleep(0.5) 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚸* ⁞* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('VEER.lua')  
@@ -5395,7 +5469,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md')
 end
 else
 if data.username_ == false then
-setvip = '🚦 ⁞ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🎖 ⁞ بالتاكيد هو مميز \n✓'   
+setvip = '🚦 ⁞ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n?? ⁞ بالتاكيد هو مميز \n✓'   
 VEERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))   
 VEERBOT:sadd(VEER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 else
@@ -7018,6 +7092,90 @@ t = '*🗳 ⁞* لا يوجد محظورين في هاذه المجموعه'
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
+if text == 'جلب نسخه الكروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then
+local list = VEERBOT:smembers(FAEDER..'bot:groups')  
+local t = '{"BOT_ID": '..FAEDER..',"GP_BOT":{'  
+for k,v in pairs(list) do   
+NAME = title_name(v) or ''
+NAME = NAME:gsub('"','')
+NAME = NAME:gsub('#','')
+NAME = NAME:gsub([[\]],'')
+link = VEERBOT:get(FAEDER.."bot:group:link"..v) or ''
+welcome = VEERBOT:get(FAEDER..'welcome:'..v) or ''
+MNSH = VEERBOT:smembers(FAEDER..'bot:monsh:'..v)
+MDER = VEERBOT:smembers(FAEDER..'bot:owners:'..v)
+MOD = VEERBOT:smembers(FAEDER..'bot:momod:'..v)
+VIP = VEERBOT:smembers(FAEDER..'bot:vipmem:'..v)
+if k == 1 then
+t = t..'"'..v..'":{"GP_NAME":"'..NAME..'",'
+else
+t = t..',"'..v..'":{"GP_NAME":"'..NAME..'",'
+end
+
+if #VIP ~= 0 then 
+t = t..'"VIP":['
+for k,v in pairs(VIP) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MOD ~= 0 then
+t = t..'"MOD":['
+for k,v in pairs(MOD) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MDER ~= 0 then
+t = t..'"MDER":['
+for k,v in pairs(MDER) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MNSH ~= 0 then
+t = t..'"MNSH":['
+for k,v in pairs(MNSH) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+t = t..'"linkgroup":"'..link..'"}'
+end
+t = t..'}}'
+local File = io.open('./'..bot_id..'.json', "w")
+File:write(t)
+File:close()
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..VEER_ID..'.json', '🚦⁞ عدد كروبات البوت • '..#list..'',dl_cb, nil)
+end
+if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then   
+if tonumber(msg.reply_to_message_id_) > 0 then
+function by_reply(extra, result, success)   
+if result.content_.document_ then 
+local ID_FILE = result.content_.document_.document_.persistent_id_ 
+local File_Name = result.content_.document_.file_name_
+add_file(msg,msg.chat_id_,ID_FILE,File_Name)
+end   
+end
+tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
+end
+end
 if text == 'الادمنيه' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'mods:'..msg.chat_id_)
 local t = '*🚦 ⁞ قائمه ادمنيه المجموعه *\n*ٴ━━━━━━━━━*\n' 
