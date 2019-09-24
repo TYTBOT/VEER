@@ -2067,15 +2067,8 @@ if text ==('المجموعات 📇') and is_devtaha(msg) then    local list = V
 if text == "تحديث السورس 🔱" and is_devtaha(msg) then  VEER_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf VEER.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
-os.execute("rm -fr plugins_/ZHRFA.lua")
-os.execute("rm -fr plugins_/games.lua")
-os.execute("rm -fr plugins_/JSON_BOT.lua")
 os.execute('wget https://raw.githubusercontent.com/TYTBOT/VEER/master/VEER.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/help_rep.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/ZHRFA.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/games.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/JSON_BOT.lua') 
-sleep(0.5) 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚸* ⁞* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('VEER.lua')  
 end
@@ -4301,14 +4294,8 @@ if text == "تحديث السورس" and is_devtaha(msg) then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf VEER.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
-os.execute("rm -fr plugins_/ZHRFA.lua")
-os.execute("rm -fr plugins_/games.lua")
-os.execute("rm -fr plugins_/JSON_BOT.lua")
 os.execute('wget https://raw.githubusercontent.com/TYTBOT/VEER/master/VEER.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/help_rep.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/ZHRFA.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/games.lua') 
-os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/JSON_BOT.lua') 
 sleep(0.5) 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚸* ⁞* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('VEER.lua')  
@@ -9252,7 +9239,7 @@ end
 end
 else
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'🎇 ⁞ '..Text_Photo..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n🖼 ⁞ صورك ¤ ('..taha.total_count_..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')\n📞 ⁞ جهاتك ¤ ('..addmempar..')')       
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'🎇 ⁞ '..Text_Photo..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n🖼 ⁞ صورك ¤ ('..taha.total_count_..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')      
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞نقودك ¤ ('..NUMPGAME..')\n📞 ⁞ جهاتك ¤ ('..addmempar..')'..'\n🌇 ⁞ لا يمكنني عرض صورتك لانك قمت بحظر البوت', 1, 'html')   
