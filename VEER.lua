@@ -9239,12 +9239,12 @@ end
 end
 else
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'🎇 ⁞ '..Text_Photo..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n🖼 ⁞ صورك ¤ ('..taha.total_count_..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'🎇 ⁞ '..Text_Photo..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n🖼 ⁞ صورك ¤ ('..taha.total_count_..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')\n
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞نقودك ¤ ('..NUMPGAME..')\n📞 ⁞ جهاتك ¤ ('..addmempar..')'..'\n🌇 ⁞ لا يمكنني عرض صورتك لانك قمت بحظر البوت', 1, 'html')   
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '\n📷 ⁞ ليس لديك صور في حسابك ✓'..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '\n📷 ⁞ ليس لديك صور في حسابك ✓'..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')\n
 end 
 end
 end
@@ -9254,7 +9254,7 @@ local get_id_text = VEERBOT:get(VEER_ID.."KLISH:ID")
 if get_id_text then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,get_id(msg,taha,get_id_text), 1, 'html')   
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')\n
 end
 end
 end
@@ -9336,7 +9336,7 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local VEERrt = VEERBOT:get(VEER_ID.."Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if VEERrt == 'مميز' and is_mod(msg) then
-sendMention(msg,msg.chat_id_,'🚦 ⁞ العضو » {'..CatchNamertprtp(data.first_name_)..'}'..'\n🎖 ⁞ تم تنزيله من ('..RTPA..') هنا\n',result.sender_user_id_)   
+sendMention(msg,msg.chat_id_,'🚦 ⁞ العضو » {'..CatchNamertprtp(data.first_name_)..'}'..'\n?? ⁞ تم تنزيله من ('..RTPA..') هنا\n',result.sender_user_id_)   
 VEERBOT:srem(VEER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 VEERBOT:del(VEER_ID.."Comd:New:rt:user:"..msg.chat_id_..result.sender_user_id_)
 elseif VEERrt == 'ادمن' and is_monsh(msg) then 
