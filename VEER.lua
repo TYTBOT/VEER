@@ -8741,7 +8741,7 @@ taha = '*🚦 ⁞ بالتاكيد تم تفعيل الايدي  *\n✓'
 VEER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
-if text == 'تعطيل الايدي بالصوره' and is_monsh(msg) or text == 'قفل الايدي بالصوره' and is_devtaha(msg) then
+if text == 'تعطيل الايدي بالصوره' and is_monsh(msg) or text == 'قفل الايدي بالصوره' and is_monsh(msg) then
 if not VEERBOT:get(VEER_ID..'lock:id:photo'..msg.chat_id_)  then
 taha = '*🚦 ⁞ تم تعطيل الايدي بالصوره *\n✓' 
 VEER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
@@ -9162,7 +9162,7 @@ local tahaid= [[
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,tahaid, 1, 'md')
 return false  
 end 
-if text == 'مسح تغير الايدي' and is_devtaha(msg) or text == 'حذف تغير الايدي' and is_devtaha(msg) or text == 'مسح الايدي' and is_devtaha(msg) 
+if text == 'مسح تغير الايدي' and is_devtaha(msg) or text == 'حذف تغير الايدي' and is_devtaha(msg) or text == 'مسح الايدي' and is_devtaha(msg) then
 VEERBOT:del(VEER_ID.."KLISH:ID")
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,  '*🚦 ⁞ تم مسح كليشه الايدي *\n', 1, 'md')
 return false  
