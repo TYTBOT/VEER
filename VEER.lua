@@ -9244,7 +9244,7 @@ else
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞نقودك ¤ ('..NUMPGAME..')\n📞 ⁞ جهاتك ¤ ('..addmempar..')'..'\n🌇 ⁞ لا يمكنني عرض صورتك لانك قمت بحظر البوت', 1, 'html')   
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '\n📷 ⁞ ليس لديك صور في حسابك ✓'..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')\n📞 ⁞ جهاتك ¤ ('..addmempar..')',1, 'html')      
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '\n📷 ⁞ ليس لديك صور في حسابك ✓'..'\n🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞ نقودك ¤ ('..NUMPGAME..')
 end 
 end
 end
@@ -9254,7 +9254,7 @@ local get_id_text = VEERBOT:get(VEER_ID.."KLISH:ID")
 if get_id_text then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,get_id(msg,taha,get_id_text), 1, 'html')   
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞نقودك ¤ ('..NUMPGAME..')\n📞 ⁞ جهاتك ¤ ('..addmempar..')', 1, 'html')   
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🔹 ⁞ ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🎖 ⁞ موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🚦 ⁞ موقع الكروب ¤ ('..rtpa..')\n🎲 ⁞ تفاعـلك ¤ ('..formsgg(msguser)..')\n📧 ⁞ رسائلك ¤ ('..(msguser)..')\n💰 ⁞نقودك ¤ ('..NUMPGAME..')
 end
 end
 end
