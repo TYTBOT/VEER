@@ -862,21 +862,6 @@ end
 return VEER_sendMsg(msg.chat_id_, msg.id_, 1,pre_msg, 1, 'md')  
 end
 
-function getChannelMembers(channel_id, offset, filter, limit)
-if not limit or limit > 200 then
-limit = 200
-end
-tdcli_function ({
-ID = "GetChannelMembers",
-channel_id_ = getChatId(channel_id).ID,
-filter_ = {
-ID = "ChannelMembers" .. filter
-},
-offset_ = offset,
-limit_ = limit
-}, dl_cb, nil)
-end
-
 function match_plugin(msg, CMD, plugin, plugin_name)
 MSG_TEXT = Tepy_Text(CMD, text)
 if MSG_TEXT then
@@ -5638,24 +5623,6 @@ num = num + 1
 end 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🎖 ⁞ تم مسح {'..num..'} من المحظورين *\n', 1, 'md') 
 end 
-
-if text and text == "تاك للكل" then
-function tall(f1, f2)
-local taha = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
-i = 0
-for k, v in pairs(f2.members_) do
-i = i + 1
-local user_info = VEERBOT:hgetall('user:'..v.user_id_)  
-if user_info and user_info.username then
-local username = user_info.username
-text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
-end
-end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
-print(text)
-end
-tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
-end
 
 if text == 'مسح المميزين' and is_mod(msg) then  
 local list = VEERBOT:smembers(VEER_ID..'vip:group'..msg.chat_id_) 
