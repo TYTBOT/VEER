@@ -930,80 +930,6 @@ VEERBOT:del("addreply1photo1"..bot_id)
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🚦 ⁞ تم مسح كليشه ترحيب عند اضافه البوت *\n', 1, 'md') 
 end
 
-if text == "متجر الملفات" or text == 'المتجر' then
-if not is_devtaha(msg) then  
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*📮¦ هاذا الامر خاص بالمطور الاساسي *\n', 1, 'md') 
-return false
-end
-local Get_Files, res = https.request("https://raw.githubusercontent.com/TEAMS7/KASPER/master/getfile.json")
-if res == 200 then
-local Get_info, res = pcall(JSON.decode,Get_Files);
-if Get_info then
-local TextS = "\n📂¦ اهلا بك في متجر الملفات \n📮¦ الملفات الموجوده حاليا \n ٴ━━━━━━━━━━━━\n\n"
-local TextE = "\nٴ━━━━━━━━━━━━\n📌¦ تدل علامة (✔) الملف مفعل\n".."📌¦ تدل علامة (✖) الملف معطل\n"
-local NumFile = 0
-for name in pairs(res.plugins_) do
-local Check_File_is_Found = io.open("plugins_/"..name,"r")
-if Check_File_is_Found then
-io.close(Check_File_is_Found)
-CeckFile = "(✔)"
-else
-CeckFile = "(✖)"
-end
-NumFile = NumFile + 1
-TextS = TextS..NumFile.."• `"..name..'` » '..CeckFile..'\n'
-end
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,TextS..TextE, 1, 'md') 
-end
-else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,"📮¦ لا يوجد اتصال من ال api \n", 1, 'md') 
-end
-return false
-end
-
-if text and text:match('تعطيل ملف (.*)') and is_devtaha(msg) then  
-local file = text:match('تعطيل ملف (.*)')
-local file_bot = io.open("plugins_/"..file,"r")
-if file_bot then
-io.close(file_bot)
-t = "*🗂¦ الملف » {"..file.."}\n📬¦ تم تعطيله وحذفه بنجاح \n✓*"
-else
-t = "*📬¦ بالتاكيد تم تعطيل وحذف ملف » {"..file.."} \n✓*"
-end
-local json_file, res = https.request("https://raw.githubusercontent.com/TEAMS7/KASPER/master/plugins_/"..file)
-if res == 200 then
-os.execute("rm -fr plugins_/"..file)
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
-load_plugins()
-dofile('VEER.lua')  
-else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,"*📮¦ عذرا لا يوجد هاكذا ملف في المتجر *\n", 1, 'md') 
-end
-return false
-end
-if text and text:match('تفعيل ملف (.*)') and is_devtaha(msg) then  
-local file = text:match('تفعيل ملف (.*)')
-local file_bot = io.open("plugins_/"..file,"r")
-if file_bot then
-io.close(file_bot)
-t = "*📬¦ بالتاكيد تم تنزيل وتفعيل ملف » {"..file.."} \n✓*"
-else
-t = "*🗂¦ الملف » {"..file.."}\n📬¦ تم تنزيله وتفعيله بنجاح \n💥*"
-end
-local json_file, res = https.request("https://raw.githubusercontent.com/TEAMS7/KASPER/master/plugins_/"..file)
-if res == 200 then
-local chek = io.open("plugins_/"..file,'w+')
-chek:write(json_file)
-chek:close()
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
-load_plugins()
-dofile('VEER.lua')  
-else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,"*📮¦ عذرا لا يوجد هاكذا ملف في المتجر *\n", 1, 'md') 
-end
-return false
-end
-
 if text == 'تحديث' and is_devtaha(msg) then  
 dofile('VEER.lua')  
 load_plugins()
@@ -2067,8 +1993,13 @@ if text ==('المجموعات 📇') and is_devtaha(msg) then    local list = V
 if text == "تحديث السورس 🔱" and is_devtaha(msg) then  VEER_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf VEER.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
+os.execute("rm -fr plugins_/games.lua")
+os.execute("rm -fr plugins_/ZHRAF.lua")
 os.execute('wget https://raw.githubusercontent.com/TYTBOT/VEER/master/VEER.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/help_rep.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/TEAMS7/KASPER/master/plugins_/games.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/TEAMS7/KASPER/master/plugins_/ZHRFA.lua') 
+
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚸* ⁞* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('VEER.lua')  
 end
@@ -4294,8 +4225,13 @@ if text == "تحديث السورس" and is_devtaha(msg) then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf VEER.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
+os.execute("rm -fr plugins_/games.lua")
+os.execute("rm -fr plugins_/ZHRFA.lua")
 os.execute('wget https://raw.githubusercontent.com/TYTBOT/VEER/master/VEER.lua') 
 os.execute('cd plugins_;wget https://raw.githubusercontent.com/TYTBOT/VEER/master/plugins_/help_rep.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/TEAMS7/KASPER/master/plugins_/games.lua') 
+os.execute('cd plugins_;wget https://raw.githubusercontent.com/TEAMS7/KASPER/master/plugins_/ZHRFA.lua') 
+
 sleep(0.5) 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚸* ⁞* تم تحديث ♻ السورس ✔ ', 1, 'md') 
 dofile('VEER.lua')  
@@ -9664,7 +9600,7 @@ end
 if text == 'قفل الاونلاين' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-VEER_send(msg.chat_id_,msg.id_,"*🚦 ⁞ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+VEER_send(msg.chat_id_,msg.id_,"*🚦 ⁞ انا لست ادمن هنا يرجى ترقيتي \n??🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
@@ -9824,7 +9760,7 @@ VEER_send(msg.chat_id_,msg.id_,"*🚦 ⁞ لا تستطيع منعي من ارس
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-VEER_send(msg.chat_id_,msg.id_,"*🚦 ⁞ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+VEER_send(msg.chat_id_,msg.id_,"*🚦 ⁞ عذرا لا تستطيع منع » { المنشئين والمطورين } \n??🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
