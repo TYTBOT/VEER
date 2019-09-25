@@ -3055,7 +3055,7 @@ elseif text == 'فتح الكلايش' and is_mod(msg) and msg.reply_to_message_
 VEERBOT:del(VEER_ID.."lock:Spam"..msg.chat_id_)  
 monsend(msg,msg.chat_id_,'💥 ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم فتح الكلايش \n✓',msg.sender_user_id_)  
 end
-if lockptf[2] == "الفارسيه" then
+if text == "قفل الفارسيه" and is_mod (msg) then
 if not VEERBOT:get(VEER_ID..'farsi'..msg.chat_id_) then
 local taha = '🚦⁞ رتبتك : '..tar..' •\n🎖⁞ تم قفل الفارسيه • \n🎗⁞ بواسطه «'..msg.sender_user_id_..'» •'
 VEERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, VEER_ID, 58, string.len(msg.sender_user_id_))
@@ -3064,7 +3064,7 @@ else
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل الفارسيه سابقا ✔️', 1, 'md')
 end
 end
-if lockptf[2] == "الفارسيه بالطرد" then
+if text == "قفل الفارسيه بالطرد" and is_mod(msg) then
 if not VEERBOT:get(FAEDER..'farsiban'..msg.chat_id_) then
 local taha = '🚦⁞ رتبتك : '..tar..' •\n🎖⁞ تم قفل الفارسيه بالطرد • \n🎗⁞ بواسطه «'..msg.sender_user_id_..'» •'
 VEERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, VEER_ID, 65, string.len(msg.sender_user_id_))
@@ -3072,7 +3072,7 @@ VEERBOT:set(VEER_ID..'farsiban'..msg.chat_id_,true)
 else
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل الفارسيه بالطرد سابقا ✔️', 1, 'md')
 end
-end
+end.
 if text == "حذف الصوره" and is_mod(msg) then 
 deleteChatPhoto(msg.chat_id_) 
 VEER_sendMsg(msg.chat_id_, msg.id_,1, '*🎖 ⁞* تم حذف صورة المجموعه \n',1,'md') 
