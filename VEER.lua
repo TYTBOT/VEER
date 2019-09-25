@@ -3072,7 +3072,7 @@ VEERBOT:set(VEER_ID..'farsiban'..msg.chat_id_,true)
 else
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل الفارسيه بالطرد سابقا ✔️', 1, 'md')
 end
-end.
+end
 if text == "حذف الصوره" and is_mod(msg) then 
 deleteChatPhoto(msg.chat_id_) 
 VEER_sendMsg(msg.chat_id_, msg.id_,1, '*🎖 ⁞* تم حذف صورة المجموعه \n',1,'md') 
