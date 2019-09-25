@@ -5641,7 +5641,7 @@ end
 
 if text and text == "تاك للكل" then
 function tall(f1, f2)
-local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
+local taha = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
 i = 0
 for k, v in pairs(f2.members_) do
 i = i + 1
