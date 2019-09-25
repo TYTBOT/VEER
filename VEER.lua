@@ -838,6 +838,20 @@ end
 end,nil)   
 end  
 
+function Tepy_Text(CMD, text, lower_case)
+if text then
+local MSG_TEXT = {}
+if lower_case then
+MSG_TEXT = { string.match(text:lower(), CMD) }
+else
+MSG_TEXT = { string.match(text, CMD) }
+end
+if next(MSG_TEXT) then
+return MSG_TEXT
+end
+end
+end
+
 function Msg_Process(msg)
 for name,plugin in pairs(plugins) do
 if plugin.VEER_TEXT and msg then
