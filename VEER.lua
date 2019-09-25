@@ -4324,7 +4324,6 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, '💥* ⁞*  تم مغادرة المجم
 return false  
 end
 if text == 'انشاء رابط' and is_mod (msg) then
-if not msg.Director then return "♦️*┇*هذا الامر يخص {المطور,المنشئ,المدير} فقط  \n💥" end
 if not VEERBOT:get(VEER_ID..'ExCmdLink'..msg.chat_id_) then
 local LinkGp = ExportLink(msg.chat_id_)
 if LinkGp then
