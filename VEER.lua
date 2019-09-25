@@ -949,6 +949,9 @@ end
 end
 end
 
+end
+end
+
 function FILES_PLUGIN(plugin, plugin_name, msg)
 for k, CMD in pairs(plugin.CMDS) do
 match_plugin(msg, CMD, plugin, plugin_name)
