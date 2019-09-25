@@ -4323,25 +4323,6 @@ changeChatMemberStatus(msg.chat_id_, bot_id, "Left")
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '💥* ⁞*  تم مغادرة المجموعه ', 1, 'md') 
 return false  
 end
-if text == 'انشاء رابط' and is_mod (msg) then
-if not VEERBOT:get(VEER_ID..'ExCmdLink'..msg.chat_id_) then
-local LinkGp = ExportLink(msg.chat_id_)
-if LinkGp then
-LinkGp = LinkGp.result
-VEERBOT:set(VEER_ID..'linkGroup'..msg.chat_id_,LinkGp)
-VEERBOT:setex(VEER_ID..'ExCmdLink'..msg.chat_id_,120,true)
-return 
-VEER_sendMsg(msg.chat_id_,msg.id_,"🙋🏻‍♂*┇*تم انشاء رابط جديد \n🔖┇["..LinkGp.."]\n🔖┇لعرض الرابط ارسل { الرابط } \n")
-else
-return
-VEER_sendMsg(msg.chat_id_,msg.id_,"♦️┇لا يمكنني انشاء رابط للمجموعه .\n🎟┇لانني لست مشرف في المجموعه \n 💥")
-end
-else
-return 
-VEER_sendMsg(msg.chat_id_,msg.id_,"♦️┇لقد قمت بانشاء الرابط سابقا .\n🎟┇ارسل { الرابط } لرؤيه الرابط  \n 💥")
-end
-return false
-end 
 if text == 'مسح المقيدين' and is_mod(msg) then     
 local list = VEERBOT:smembers(VEER_ID..'tedmembars'..msg.chat_id_) 
 local pv = 0
