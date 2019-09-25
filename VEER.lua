@@ -876,6 +876,81 @@ return
 end
 end
 
+local function veer_send(chat_id, reply_to_message_id, text)
+local TextParseMode = {ID = "TextParseModeMarkdown"}
+tdcli_function ({ID = "SendMessage",chat_id_ = chat_id,reply_to_message_id_ = reply_to_message_id,disable_notification_ = 1,from_background_ = 1,reply_markup_ = nil,input_message_content_ = {ID = "InputMessageText",text_ = text,disable_web_page_preview_ = 1,clear_draft_ = 0,entities_ = {},parse_mode_ = TextParseMode,},}, dl_cb, nil)
+end
+function download_to_file(url, file_path) 
+local respbody = {} 
+local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
+local response = nil 
+options.redirect = false 
+response = {https.request(options)} 
+local code = response[2] 
+local headers = response[3] 
+local status = response[4] 
+if code ~= 200 then return false, code 
+end 
+file = io.open(file_path, "w+") 
+file:write(table.concat(respbody)) 
+file:close() 
+return file_path, code 
+end 
+local function GET_TEXT(msg)
+if chat_type == 'super' then 
+function add_file(msg,chat,ID_FILE,File_Name)
+if File_Name:match('.json') then
+if File_Name:lower():match('(%d+)') ~= bot_id:lower() then 
+VEER_sendMsg(chat,msg.id_,"*📮¦ الملف ليس للبوت \n👨🏻‍✈️*")   
+return false 
+end      
+local File = json:decode(https.request('https://api.telegram.org/bot' .. chaneel .. '/getfile?file_id='..ID_FILE) ) 
+download_to_file('https://api.telegram.org/file/bot'..chaneel..'/'..File.result.file_path, ''..File_Name) 
+VEER_sendMsg(chat,msg.id_,"*📮¦ جاري رفع الملف ♻*")   
+else
+VEER_sendMsg(chat,msg.id_,"*📮¦ الملف ليس بصيغة ال json \n👨🏻‍✈️*")   
+end      
+local info_file = io.open('./'..bot_id..'.json', "r"):read('*a')
+local groups = JSON.decode(info_file)
+vardump(groups)
+for idg,v in pairs(groups.GP_BOT) do
+ VEERBOT:sadd(VEER_ID.."bot:gpsby:id",idg)         
+if v.MNSH then
+for k,idmsh in pairs(v.MNSH) do
+VEERBOT:sadd(VEER_ID..'moder'..idg,idmsh)  
+print('تم رفع '..k..' منشئين')
+end
+end
+if v.MDER then
+for k,idmder in pairs(v.MDER) do
+VEERBOT:sadd(VEER_ID..'modergroup'..idg,idmder)  
+print('تم رفع '..k..' مدراء')
+end
+end
+if v.MOD then
+for k,idmod in pairs(v.MOD) do
+vardump(idmod)
+VEERBOT:sadd(VEER_ID..'mods:'..idg,idmod)  
+print('تم رفع '..k..' ادمنيه')
+end
+end
+if v.VIP then
+for k,idvip in pairs(v.VIP) do
+VEERBOT:sadd(VEER_ID..'vip:group'..idg,idvip)  
+print('تم رفع '..k..' مميزين')
+end
+end
+if v.linkgroup then
+if v.linkgroup ~= "" then
+VEERBOT:set(VEER_ID.."link:group"..idg,v.linkgroup)   
+print('تم وضع رابط ')
+end
+end
+end
+end
+end
+end
+
 function FILES_PLUGIN(plugin, plugin_name, msg)
 for k, CMD in pairs(plugin.CMDS) do
 match_plugin(msg, CMD, plugin, plugin_name)
@@ -2782,7 +2857,7 @@ VEERBOT:set(VEER_ID.."lock:Animation"..msg.chat_id_,'ktm')
 monsend(msg,msg.chat_id_,'💥 ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم قفـل المتحركه بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل المتحركه بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 VEERBOT:set(VEER_ID.."lock:Animation"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'💥 ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم قفـل المتحركه بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'?? ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم قفـل المتحركه بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح المتحركه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 VEERBOT:del(VEER_ID.."lock:Animation"..msg.chat_id_)  
 monsend(msg,msg.chat_id_,'💥 ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم فتح المتحركه \n✓',msg.sender_user_id_)  
