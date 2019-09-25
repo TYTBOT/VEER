@@ -901,14 +901,14 @@ if chat_type == 'super' then
 function add_file(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.json') then
 if File_Name:lower():match('(%d+)') ~= bot_id:lower() then 
-VEER_sendMsg(chat,msg.id_,"*📮¦ الملف ليس للبوت \n👨🏻‍✈️*")   
+veer_send(chat,msg.id_,"*📮¦ الملف ليس للبوت \n👨🏻‍✈️*")   
 return false 
 end      
 local File = json:decode(https.request('https://api.telegram.org/bot' .. chaneel .. '/getfile?file_id='..ID_FILE) ) 
 download_to_file('https://api.telegram.org/file/bot'..chaneel..'/'..File.result.file_path, ''..File_Name) 
-VEER_sendMsg(chat,msg.id_,"*📮¦ جاري رفع الملف ♻*")   
+veer_send(chat,msg.id_,"*📮¦ جاري رفع الملف ♻*")   
 else
-VEER_sendMsg(chat,msg.id_,"*📮¦ الملف ليس بصيغة ال json \n👨🏻‍✈️*")   
+veer_send(chat,msg.id_,"*📮¦ الملف ليس بصيغة ال json \n👨🏻‍✈️*")   
 end      
 local info_file = io.open('./'..bot_id..'.json', "r"):read('*a')
 local groups = JSON.decode(info_file)
@@ -944,8 +944,6 @@ if v.linkgroup then
 if v.linkgroup ~= "" then
 VEERBOT:set(VEER_ID.."link:group"..idg,v.linkgroup)   
 print('تم وضع رابط ')
-end
-end
 end
 end
 end
