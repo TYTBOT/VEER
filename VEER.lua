@@ -627,6 +627,36 @@ end
 return 
 t 
 end
+
+local msg = data.message_
+text = msg.content_.text_
+if text then 
+function VEER_ID(extra,result,success)
+if result.id_ then 
+local dx = VEERBOT:get("VEER_ID:name"..result.id_)
+if not result.first_name_ then 
+if dx then 
+VEERBOT:del("VEER_ID:name"..result.id_) 
+end
+end
+if result.first_name_ then 
+if dx and dx ~= result.first_name_ then 
+local faeder_text = {
+  "اسمك الجديد { "..result.first_name_.." }\n ليش غيرته 🌚😹",
+  "اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ☹️👌",
+  "ليش غيرت اسمك { "..result.first_name_.." }\n قطيت احد حبي ؟ 🌚😹",
+  "اسمك الجديد يخبل ضلعي 🤭😹{ "..result.first_name_.." }", 
+}
+dxx = math.random(#VEER_ID_text)
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, VEER_ID_text[dxx], 1, 'html')
+end  
+VEERBOT:set("VEER_ID:name"..result.id_, result.first_name_)  
+end
+end
+end
+getUser(msg.sender_user_id_, faeder)
+end
+
 function sendaction(chat_id, action, progress) 
 tdcli_function ({ ID = "SendChatAction",  chat_id_ = chat_id, action_ = {  ID = "SendMessage" .. action .. "Action", progress_ = progress or 100} }, dl_cb, nil) 
 end
@@ -2801,7 +2831,7 @@ VEERBOT:set(VEER_ID.."lock:geam"..msg.chat_id_,'kick')
 monsend(msg,msg.chat_id_,'💥 ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم قفـل الالعاب بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الالعاب' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 VEERBOT:del(VEER_ID.."lock:geam"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'💥 ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم فتح الالعاب \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'?? ⁞ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n🚦 ⁞ تـم فتح الالعاب \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الاغاني' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 VEERBOT:set(VEER_ID.."lock:Audio"..msg.chat_id_,'del')  
