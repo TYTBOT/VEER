@@ -992,11 +992,11 @@ linkgp = '\n⚁ ⁞ الاسم ↫ ❪`'..chat.title_..'`❫'
 end  
 local text = '🚦 ⁞ اهلا بك عزيزي المطور الاساسي '..
 '\n🎖 ⁞ تم تفعيل مجموعه جديده '..
-'\n  ٴ━━━━━━━━━━'..
+'\n  ➖➖➖➖➖➖➖➖➖'..
 '\n🔖 ⁞ معلومات المجموعه'..
 '\n⚀ ⁞ الايدي ↫ ❪`'..msg.chat_id_..'`❫'..linkgp..
 '\n⚂ ⁞ عدد الاعضاء ↫ ❪'..data.member_count_..'❫'..
-'\n  ٴ━━━━━━━━━━'..
+'\n  ➖➖➖➖➖➖➖➖➖'..
 '\n💥 ⁞ معلومات '..rtpa_add..' الي فعل المجموعه '..
 '\n🔸 ⁞ الايدي ↫ ❪`'..msg.sender_user_id_..'`❫'..usersdd..
 '\n🔸 ⁞ الاسم ↫ ❪['..CatchName(result.first_name_,45)..'](tg://user?id='..msg.sender_user_id_..')❫'
@@ -1054,11 +1054,11 @@ linkgp = '\n⚁ ⁞ الاسم ↫ ❪`'..chat.title_..'`❫'
 end  
 local text = '🚦 ⁞ اهلا بك عزيزي المطور الاساسي '..
 '\n🎖 ⁞ تم تفعيل مجموعه جديده '..
-'\n  ٴ━━━━━━━━━━'..
+'\n  ➖➖➖➖➖➖➖➖➖'..
 '\n🔖 ⁞ معلومات المجموعه'..
 '\n⚀ ⁞ الايدي ↫ ❪`'..msg.chat_id_..'`❫'..linkgp..
 '\n⚂ ⁞ عدد الاعضاء ↫ ❪'..data.member_count_..'❫'..
-'\n  ٴ━━━━━━━━━━'..
+'\n  ➖➖➖➖➖➖➖➖➖'..
 '\n💥 ⁞ معلومات المطور '..
 '\n🔸 ⁞ الايدي ↫ ❪`'..msg.sender_user_id_..'`❫'..usersdd..
 '\n🔸 ⁞ الاسم ↫ ❪['..CatchName(result.first_name_,45)..'](tg://user?id='..msg.sender_user_id_..')❫'..
@@ -1101,11 +1101,11 @@ linkgp = '\n*⚁ ⁞ الاسم ↫ ❪*`'..title_name(msg.chat_id_)..'`❫'
 end  
 local text = '*🚦 ⁞ اهلا بك عزيزي المطور الاساسي '..
 '\n🎖 ⁞ تم تعطيل مجموعه جديده '..
-'\n  ٴ━━━━━━━━━━'..
+'\n  ➖➖➖➖➖➖➖➖➖'..
 '\n🔖 ⁞ معلومات المجموعه'..
 '\n⚀ ⁞ الايدي ↫ ❪*`'..msg.chat_id_..'`*❫'..linkgp..
 '\n⚂ ⁞ عدد الاعضاء ↫ ❪'..data.member_count_..'❫'..
-'\n  ٴ━━━━━━━━━━'..
+'\n  ➖➖➖➖➖➖➖➖➖'..
 '\n💥 ⁞ معلومات المطور '..
 '\n🔸 ⁞ الايدي ↫ ❪*`'..msg.sender_user_id_..'`*❫'..usersdd..
 '\n🔸 ⁞ الاسم ↫ ❪*['..CatchName(result.first_name_,20)..'](tg://user?id='..msg.sender_user_id_..')❫'
@@ -1944,19 +1944,19 @@ local text = [[*
 💁🏻‍♂ ⁞ اهلآ بك، عزيزي ... ✓
 🚦 ⁞ في اوامـر التواصل 
 🎖 ⁞ قڤل – فتح + الامر ↓
-ٴ━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖
 🎖 ⁞ الروابطہَ — الصور
 🎖 ⁞ الاغانيہَ — الملصقات
 🎖 ⁞ الملفات — الجهات
 🎖 ⁞ الفيديو — التوجيهہَ
 🎖 ⁞ الصوت — المتحركۃ
 🎖 ⁞ الكلَ { لـ؛قڤل چميع الاوآمر } 
-ٴ━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖
 📨 ⁞ لحظَر والغَاء الحظر ڤي التواصل
 📨 ⁞ حظر ↫ بالرد ؏َ الشخص
 📨 ⁞ الغاء الحظر ↫ بالرد ؏َ الشخص
 📨 ⁞ الاعدادات 
-ٴ━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖
 ..
 *]] 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md')  
@@ -2005,9 +2005,9 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚸* ⁞* تم تحديث ♻ السو�
 dofile('VEER.lua')  
 end
 
-if text == 'المحظورين عام 📑' and is_devtaha(msg) then   local list = VEERBOT:smembers(VEER_ID..'VEER:gbaned')  local t = '*🚦 ⁞ قائمه المحظورين عام *\n*ٴ━━━━━━━━━*\n'   for k, v in pairs(list) do   local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)  if taha then  local username = taha  t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"     else  t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"     end  end   if #list == 0 then   t = '*🎖 ⁞* لا يوجد محظورين عام في البوت'   end   VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')  end  
-if text == 'المطورين 📑' and is_devtaha(msg) then   local list = VEERBOT:smembers(VEER_ID..'sudo:bot')  local t = '*🚦 ⁞ قائمه مطورين البوت *\n*ٴ━━━━━━━━━*\n'   for k, v in pairs(list) do   local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)  if taha then  local username = taha  t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"     else  t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"     end  end   if #list == 0 then   t = '*🎖 ⁞* لا يوجد مطورين في البوت'   end   VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')  end  
-if text == 'المميزين عام 📑' and is_devtaha(msg) then   local list = VEERBOT:smembers(VEER_ID..'vip:groups')  local t = '*🚦 ⁞ قائمه المميزين عام *\n*ٴ━━━━━━━━━*\n'   for k, v in pairs(list) do   local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)  if taha then  local username = taha  t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"     else  t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"     end  end   if #list == 0 then   t = '*🎖 ⁞* لا يوجد مميزين عام في البوت'   end   VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')  end  
+if text == 'المحظورين عام 📑' and is_devtaha(msg) then   local list = VEERBOT:smembers(VEER_ID..'VEER:gbaned')  local t = '*🚦 ⁞ قائمه المحظورين عام *\n*➖➖➖➖➖➖➖➖➖*\n'   for k, v in pairs(list) do   local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)  if taha then  local username = taha  t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"     else  t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"     end  end   if #list == 0 then   t = '*🎖 ⁞* لا يوجد محظورين عام في البوت'   end   VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')  end  
+if text == 'المطورين 📑' and is_devtaha(msg) then   local list = VEERBOT:smembers(VEER_ID..'sudo:bot')  local t = '*🚦 ⁞ قائمه مطورين البوت *\n*➖➖➖➖➖➖➖➖➖*\n'   for k, v in pairs(list) do   local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)  if taha then  local username = taha  t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"     else  t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"     end  end   if #list == 0 then   t = '*🎖 ⁞* لا يوجد مطورين في البوت'   end   VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')  end  
+if text == 'المميزين عام 📑' and is_devtaha(msg) then   local list = VEERBOT:smembers(VEER_ID..'vip:groups')  local t = '*🚦 ⁞ قائمه المميزين عام *\n*➖➖➖➖➖➖➖➖➖*\n'   for k, v in pairs(list) do   local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)  if taha then  local username = taha  t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"     else  t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"     end  end   if #list == 0 then   t = '*🎖 ⁞* لا يوجد مميزين عام في البوت'   end   VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')  end  
 if text and text:match("^استخراج الرابط 🔦$") and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."get:link:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)   local t = '*🚦 ⁞ حسنآ ارسل لي ايدي المجموعه*\n💥'   VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')  end
 if text and text:match("^كشف 🔍$") and is_devtaha(msg) then   VEERBOT:setex(VEER_ID.."get:info:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  local t = '*🚦 ⁞ حسنآ ارسل لي ايدي المجموعه*\n💥'   VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')  end
 end
@@ -3032,7 +3032,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*⚠️ ⁞* المجموعه تحتوي
 end
 if  text == "قائمه الردود بالرد" and is_monsh(msg) then  
 local list = VEERBOT:smembers(VEER_ID.."rep:media"..msg.chat_id_)  
-t = "*🚦 ⁞ قائمة ردود المجموعه بالرد ✓\nٴ━━━━━━━━━━━*\n"    
+t = "*🚦 ⁞ قائمة ردود المجموعه بالرد ✓\n➖➖➖➖➖➖➖➖➖*\n"    
 for k,v in pairs(list) do  
 if VEERBOT:get(VEER_ID.."addreply1:gif"..v..msg.chat_id_) then
 taha = 'متحركه 🎆'
@@ -3248,7 +3248,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*⚠️ ⁞* المجموعه تحتوي
 end
 if  text == "قائمه الردود" and is_monsh(msg) then  
 local list = VEERBOT:smembers(VEER_ID.."repmedia"..msg.chat_id_)  
-t = "*🚦 ⁞ قائمة ردود المجموعه ✓\nٴ━━━━━━━━━━━*\n"    
+t = "*🚦 ⁞ قائمة ردود المجموعه ✓\n➖➖➖➖➖➖➖➖➖*\n"    
 for k,v in pairs(list) do  
 if VEERBOT:get(VEER_ID.."add:reply1:gif"..v..msg.chat_id_) then
 taha = 'متحركه 🎆'
@@ -3481,7 +3481,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*⚠️ ⁞* المجموعه تحتوي
 end
 if  text == "ردود المطور بالرد" and is_devtaha(msg) then    
 local list = VEERBOT:smembers(VEER_ID.."rep:media:all:rd"..bot_id)    
-t = "*🚦 ⁞ قائمة ردود المطور بالرد ✓\nٴ━━━━━━━━━━━*\n"    
+t = "*🚦 ⁞ قائمة ردود المطور بالرد ✓\n➖➖➖➖➖➖➖➖➖*\n"    
 for k,v in pairs(list) do    
 if VEERBOT:get(VEER_ID.."add:repallt:gif:all:rd"..v..bot_id) then
 taha = 'متحركه 🎆'
@@ -3543,7 +3543,7 @@ VEERBOT:del(VEER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)
 return false  end 
 if not VEERBOT:sismember(VEER_ID..'rep:media:all:rd'..bot_id,text) then
 VEERBOT:del(VEER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)    
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎫 ⁞ الكلمه ↫ {* ["..text.."] *} 🍂\n🚦 ⁞ لا يوجد رد بهاذه الكلمه*\n💥\n", 1, 'md')  
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎫 ⁞ الكلمه ↫ {* ["..text.."] *} ✓\n🚦 ⁞ لا يوجد رد بهاذه الكلمه*\n💥\n", 1, 'md')  
 VEERBOT:del("add:repallt:gif:all:rd"..text..bot_id)    
 VEERBOT:del("add:rep:tvico:all:rd"..text..bot_id)    
 VEERBOT:del("add:rep:tstekr:all:rd"..text..bot_id)    
@@ -3554,7 +3554,7 @@ VEERBOT:del("all:addreply1:document:gp"..text..bot_id)
 VEERBOT:del("all:addreply1:audio:gp"..text..bot_id)
 VEERBOT:del("rep:media:all:rd"..bot_id,text)    
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📌 ⁞ الكلمه ↫ {* ["..text.."] *} 🍂\n💢 ⁞ تم حذفها من قائمة الردود *\n💥\n", 1, 'md')  
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📌 ⁞ الكلمه ↫ {* ["..text.."] *} ✓\n💢 ⁞ تم حذفها من قائمة الردود *\n💥\n", 1, 'md')  
 VEERBOT:del(VEER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)    
 VEERBOT:del(VEER_ID.."add:repallt:gif:all:rd"..text..bot_id)    
 VEERBOT:del(VEER_ID.."add:rep:tvico:all:rd"..text..bot_id)    
@@ -3727,7 +3727,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*⚠️ ⁞* المجموعه تحتوي
 end
 if  text == "ردود المطور" and is_devtaha(msg) then    
 local list = VEERBOT:smembers(VEER_ID.."rep:media:all"..bot_id)    
-t = "*🚦 ⁞ قائمة ردود المطور ✓\nٴ━━━━━━━━━━━*\n"    
+t = "*🚦 ⁞ قائمة ردود المطور ✓\n➖➖➖➖➖➖➖➖➖*\n"    
 for k,v in pairs(list) do    
 if VEERBOT:get(VEER_ID.."add:repallt:gif:all"..v..bot_id) then
 taha = 'متحركه 🎆'
@@ -3788,10 +3788,10 @@ VEERBOT:del(VEER_ID.."add:repallt"..msg.sender_user_id_..bot_id)
 return false  end   
 if not VEERBOT:sismember(VEER_ID..'rep:media:all'..bot_id,text) then
 VEERBOT:del(VEER_ID.."add:repallt"..msg.sender_user_id_..bot_id)    
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎫 ⁞ الكلمه ↫ {* ["..text.."] *} 🍂\n🚦 ⁞ لا يوجد رد بهاذه الكلمه*\n💥\n", 1, 'md')  
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎫 ⁞ الكلمه ↫ {* ["..text.."] *} ✓\n🚦 ⁞ لا يوجد رد بهاذه الكلمه*\n💥\n", 1, 'md')  
 VEERBOT:del(VEER_ID.."add:repallt:gif:all"..text..bot_id)    VEERBOT:del(VEER_ID.."add:rep:tvico:all"..text..bot_id)    VEERBOT:del(VEER_ID.."add:rep:tstekr:all"..text..bot_id)    VEERBOT:del(VEER_ID.."add:rep:text:all"..text..bot_id) VEERBOT:srem("rep:media:all"..bot_id,text) 
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📌 ⁞ الكلمه ↫ {* ["..text.."] *} 🍂\n💢 ⁞ تم حذفها من قائمة الردود *\n💥\n", 1, 'md')  
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*📌 ⁞ الكلمه ↫ {* ["..text.."] *} ✓\n💢 ⁞ تم حذفها من قائمة الردود *\n💥\n", 1, 'md')  
 VEERBOT:del(VEER_ID.."add:repallt"..msg.sender_user_id_..bot_id)    
 VEERBOT:del(VEER_ID.."add:repallt:gif:all"..text..bot_id)    
 VEERBOT:del(VEER_ID.."add:rep:tvico:all"..text..bot_id)    
@@ -4025,7 +4025,7 @@ end
 if text == ("كشف البوتات") and is_monsh(msg) then 
 local function cb(extra,result,success)
 local admins = result.members_  
-text = '*💠 ⁞ اهلا بك عزيزي في كشف البوتات*\nٴ━━━━━━━━━━\n'
+text = '*💠 ⁞ اهلا بك عزيزي في كشف البوتات*\n➖➖➖➖➖➖➖➖➖\n'
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -4038,12 +4038,12 @@ elseif result.members_[i].status_.ID == "ChatMemberStatusEditor" then
 t = t + 1
 tr = ' ❪✯❫'
 end
-text = text.."⟡➺ [@"..ta.username_..']'..tr.."\n"
+text = text.."⟡~⪼ [@"..ta.username_..']'..tr.."\n"
 if #admins == 0 then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎖 ⁞ لا توجد بوتات هنا *\n ", 1, 'md')
 return false end
 if #admins == i then 
-local a = '\nٴ━━━━━━━━━━\n*🚦 ⁞ عدد البوتات التي هنا ↫ ❪'..n..'❫* بوت\n'
+local a = '\n➖➖➖➖➖➖➖➖➖\n*🚦 ⁞ عدد البوتات التي هنا ↫ ❪'..n..'❫* بوت\n'
 local f = '*🚦 ⁞ عدد البوتات التي هي ادمن ↫ ❪'..t..'❫*\n*⚠ ⁞ ملاحضه علامة ال (✯) تعني ان البوت ادمن *\n💥'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, text..a..f, 1, 'md')
 end
@@ -5277,12 +5277,12 @@ tdcli_function ({ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID },
 function(arg,tah)  
 if tah.invite_link_ then
-linkgn = '⚠️* ⁞* اسم الكروب ➘\n ٴ❴ ['..data.title_..']('..tah.invite_link_..') ❵ ➺'
+linkgn = '⚠️* ⁞* اسم الكروب ➘\n ٴ❴ ['..data.title_..']('..tah.invite_link_..') ❵ ~⪼'
 else
-linkgn = '⚠️* ⁞* اسم الكروب ➘\n ٴ❴ `'..data.title_..'` ❵ ➺'
+linkgn = '⚠️* ⁞* اسم الكروب ➘\n ٴ❴ `'..data.title_..'` ❵ ~⪼'
 end
 local text = 
-'\n*🚦 ⁞ اهلا بك عزيزي في الاعدادات 🌟*\nٴ━━━━━━━━━━━━'..
+'\n*🚦 ⁞ اهلا بك عزيزي في الاعدادات 🌟*\n➖➖➖➖➖➖➖➖➖'..
 '\n*💥 ⁞ الروابط ↫❪ '..lock_links..
 ' ❫*\n'..'*💥 ⁞ المعرفات ↫❪ '..lock_user..
 ' ❫*\n'..'*💥 ⁞ التاك ↫❪ '..lock_hash..
@@ -5294,16 +5294,16 @@ local text =
 ' ❫*\n'..'*💥 ⁞ الماركدون ↫❪ '..lock_mark..
 ' ❫*\n'..'*💥 ⁞ التعديل ↫❪ '..lock_edit..
 ' ❫*\n'..'*💥 ⁞ تعديل الميديا ↫❪ '..lock_edit_med..
-' ❫*\nٴ━━━━━━━━━━━━'..
+' ❫*\n➖➖➖➖➖➖➖➖➖'..
 '\n'..'*💥 ⁞ الكلايش ↫❪ '..lock_spam..
-' ❫*\n'..'*💥 ⁞ الكيبورد ↫❪ '..lock_inlin..
+' ❫*\n'..'*?? ⁞ الكيبورد ↫❪ '..lock_inlin..
 ' ❫*\n'..'*💥 ⁞ الاغاني ↫❪ '..lock_vico..
 ' ❫*\n'..'*💥 ⁞ المتحركه ↫❪ '..lock_gif..
 ' ❫*\n'..'*💥 ⁞ الملفات ↫❪ '..lock_file..
 ' ❫*\n'..'*💥 ⁞ الدردشه ↫❪ '..lock_text..
 ' ❫*\n'..'*💥 ⁞ الفيديو ↫❪ '..lock_ved..
 ' ❫*\n'..'*💥 ⁞ الصور ↫❪ '..lock_photo..
-' ❫*\nٴ━━━━━━━━━━━━'..
+' ❫*\n➖➖➖➖➖➖➖➖➖'..
 '\n'..'*💥 ⁞ الصوت ↫❪ '..lock_muse..
 ' ❫*\n'..'*💥 ⁞ الملصقات ↫❪ '..lock_ste..
 ' ❫*\n'..'*💥 ⁞ الجهات ↫❪ '..lock_phon..
@@ -5314,8 +5314,8 @@ local text =
 ' ❫*\n'..'*💥 ⁞ التكرار ↫❪ '..getadd_or_rem('spam')..
 ' ❫*\n'..'*💥 ⁞ الترحيب ↫❪ '..getadd_or_rem('welcome')..
 ' ❫*\n'..'*💥 ⁞ عدد التكرار ↫❪ '..NUM_MSG_MAX..
-' ❫*\n   ٴ━━━━━━━━━━━━\n'..
-'\n'..linkgn..'\n*🚦 ⁞ ايدي الكروب ➘ \nٴ❴* `'..msg.chat_id_..'` *❵* ➺\nٴ'    
+' ❫*\n   ➖➖➖➖➖➖➖➖➖\n'..
+'\n'..linkgn..'\n*🚦 ⁞ ايدي الكروب ➘ \nٴ❴* `'..msg.chat_id_..'` *❵* ~⪼\nٴ'    
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md')     
 end,nil) 
 end,nil)  
@@ -7002,14 +7002,14 @@ saddbyusername(username,unbanusername)
 end 
 if text == 'المحظورين' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'VEER:baned'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه محظورين المجموعه *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه محظورين المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7019,14 +7019,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'الادمنيه' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'mods:'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه ادمنيه المجموعه *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه ادمنيه المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7036,14 +7036,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المميزين' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'vip:group'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه مميزين المجموعه *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه مميزين المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7053,14 +7053,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المميزين عام' and is_devtaha(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'vip:groups')
-local t = '*🚦 ⁞ قائمه المميزين عام *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه المميزين عام *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7070,14 +7070,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المطورين' and is_devtaha(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'sudo:bot')
-local t = '*🚦 ⁞ قائمه مطورين البوت *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه مطورين البوت *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7087,14 +7087,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المدراء' and is_owner(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'modergroup'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه مدراء المجموعه *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه مدراء المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7104,14 +7104,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end 
 if text == 'المحظورين عام' and is_devtaha(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'VEER:gbaned')
-local t = '*🚦 ⁞ قائمه المحظورين عام *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه المحظورين عام *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7121,14 +7121,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المنشئين' and is_owner(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'moder'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه منشئين المجموعه *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه منشئين المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7138,14 +7138,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المكتومين' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'mutes'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه مكتومين المجموعه *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه مكتومين المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -7155,14 +7155,14 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المقيدين' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'tedmembars'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه مقيدين المجموعه *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه مقيدين المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -8348,7 +8348,7 @@ end
 if text ==('مسح قائمه المنع') and is_mod(msg) then VEERBOT:del(VEER_ID..'filters:'..msg.chat_id_) VEER_sendMsg(msg.chat_id_, msg.id_, 1,'📇* ⁞* تم مسح قائمه المنع', 1, 'md') end 
 if text == ('قائمه المنع') and is_mod(msg) then  
 local list = VEERBOT:smembers(VEER_ID..'filters:'..msg.chat_id_) 
-local t = '*📋 ⁞* قائمه منع الكلمات 🍂 \n--------------------\n' for k,v in pairs(list) do t = t..'*'..k.."↫ { * `"..v.."` *} *\n"  end if #list == 0 then t = '*🚨 ⁞* قائمه المنع فارغه' end VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') end 
+local t = '*📋 ⁞* قائمه منع الكلمات ✓ \n--------------------\n' for k,v in pairs(list) do t = t..'*'..k.."↫ { * `"..v.."` *} *\n"  end if #list == 0 then t = '*🚨 ⁞* قائمه المنع فارغه' end VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') end 
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and is_mod(msg) then  
 if VEERBOT:sismember(VEER_ID..'lock:pin',msg.chat_id_) and not is_monsh(msg) then
 VEER_sendMsg(msg.chat_id_,msg.id_, 1, "*🚦 ⁞* التثبيت مقفل في المجموعه \n✓", 1, 'md')  
@@ -8512,20 +8512,20 @@ tdcli_function ({ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID },
 function(arg,data) 
 if data.invite_link_ then
-linkgn = '\n⚠️* ⁞* اسم الكروب ➘\n ٴ❪ ['..ta.title_..']('..data.invite_link_..') ❫ ➺'
+linkgn = '\n⚠️* ⁞* اسم الكروب ➘\n ٴ❪ ['..ta.title_..']('..data.invite_link_..') ❫ ~⪼'
 else
-linkgn = '\n⚠️* ⁞* اسم الكروب ➘\n ٴ❪ `'..ta.title_..'` ❫ ➺'
+linkgn = '\n⚠️* ⁞* اسم الكروب ➘\n ٴ❪ `'..ta.title_..'` ❫ ~⪼'
 end
 local nummsg = tonumber(VEERBOT:get(VEER_ID..'groupmsg:'..msg.chat_id_..':')) 
 local nummsgg = VEERBOT:get(VEER_ID..'groupmsg:'..msg.chat_id_..':') 
-local taha = '*🚦 ⁞ اهلا بك في معلومات المجموعه*\nٴ━━━━━━━━━━\n*'..
+local taha = '*🚦 ⁞ اهلا بك في معلومات المجموعه*\n➖➖➖➖➖➖➖➖➖\n*'..
 '👨🏻‍✈️ ⁞* عدد الادمنيه ↫ *❪ '..data.administrator_count_..
 ' ❫*\n*🚯 ⁞* عدد المطرودين ↫ *❪ '..data.kicked_count_..
 ' ❫*\n*🙋🏻‍♂ ⁞* عدد الاعضاء ↫ *❪ '..data.member_count_..
 ' ❫*\n*📨 ⁞* عدد الرسائل ↫ *❪ '..(nummsgg)..
 ' ❫*\n📈* ⁞* التفاعل ↫ *❪ '..(formsggroup(nummsg))..
 ' ❫*\n*🗳 ⁞* الايدي   ➘\n ٴ❪`'..(msg.chat_id_)..
-'`❫ ➺'..linkgn..''  
+'`❫ ~⪼'..linkgn..''  
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, 'md') 
 end,nil)
 end,nil)
@@ -8849,11 +8849,11 @@ local nupmsgg =  tonumber((msggstaha / msgtaha) * 100)
 local msguser = tonumber(VEERBOT:get(VEER_ID..'msg:user:'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
 local tahamsg = (VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 if is_devtaha(msg) then 
-t = 'مطور اساسي 🌟'  
+t = 'مطور اساسي'  
 elseif is_sudo(msg) then 
-t = 'مطور البوت ✨'  
+t = 'مطور البوت'  
 elseif is_owner(msg) then 
-t = 'المنشئ 🔥'  
+t = 'المنشئ'  
 elseif is_monsh(msg) then 
 t = VEERBOT:get(VEER_ID.."Comd:New:rt:user:"..msg.chat_id_..msg.sender_user_id_) or 'المدير ☄'     
 elseif is_mod(msg) then 
@@ -8863,7 +8863,7 @@ t = 'مميز عام ✓'
 elseif is_vipgroup(msg) then 
 t = VEERBOT:get(VEER_ID.."Comd:New:rt:user:"..msg.chat_id_..msg.sender_user_id_) or 'مميز 🏅'   
 else 
-t = 'عضو 👧'   
+t = 'عضو'   
 end       
 tdcli_function ({ID = "GetChatMember",
 chat_id_ = msg.chat_id_,
@@ -8882,18 +8882,18 @@ else
 usertaha = ''
 end
 if da.status_.ID == "ChatMemberStatusCreator" then
-rtpa = 'المنشئ ✓'
+rtpa = 'المنشئ'
 elseif da.status_.ID == "ChatMemberStatusEditor" then
-rtpa = 'الادمن 🎉'
+rtpa = 'الادمن'
 elseif da.status_.ID == "ChatMemberStatusMember" then
-rtpa = 'عضو 👧'
+rtpa = 'عضو'
 end
 if pho.total_count_ == 0 then
 photouser1 = ''
 else
 photouser1 = '\n*🎆 ⁞ عدد صوره ↫ ❪ '..pho.total_count_..' ❫*'
 end
-local taha = '\n*⚠️ ⁞ اهلا عزيزي المستخدم 🍂\nٴ━━━━━━━━━━━*'..'\n*🗯 ⁞ ايديـك ↫ ❪ '..msg.sender_user_id_..' ❫*'..usertaha..'\n*⚜ ⁞ اسمك ↫ ❪* `'..CatchNamee(data.first_name_,45)..'` *❫*'..'\n*📨 ⁞ رسـائلك ↫ ❪ '..tahamsg..' ❫*'..photouser1..'\n*🎖 ⁞ رتبتـك ↫ ❪ '..t..' ❫*\n*⭐ ⁞ رتبة الكروب ↫ ❪ '..rtpa..' ❫*\n*🗳 ⁞ تفــاعلك ↫ ❪ '..formsgg(msguser)..' ❫*\n*🚦 ⁞ نسبـة تفاعلك ↫ ❪ '..string.sub(nupmsgg, 1,5)..'% ❫*'
+local taha = '\n*⚠️ ⁞ اهلا عزيزي المستخدم ✓\n➖➖➖➖➖➖➖➖➖*'..'\n*🗯 ⁞ ايديـك ↫ ❪ '..msg.sender_user_id_..' ❫*'..usertaha..'\n*⚜ ⁞ اسمك ↫ ❪* `'..CatchNamee(data.first_name_,45)..'` *❫*'..'\n*📨 ⁞ رسـائلك ↫ ❪ '..tahamsg..' ❫*'..photouser1..'\n*🎖 ⁞ رتبتـك ↫ ❪ '..t..' ❫*\n*⭐ ⁞ رتبة الكروب ↫ ❪ '..rtpa..' ❫*\n*🗳 ⁞ تفــاعلك ↫ ❪ '..formsgg(msguser)..' ❫*\n*🚦 ⁞ نسبـة تفاعلك ↫ ❪ '..string.sub(nupmsgg, 1,5)..'% ❫*'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, ''..taha..'', 1, "md") 
 end,nil)
 end,nil)
@@ -8918,7 +8918,7 @@ end
 if text == "معرفي"  then  
 function getmepar(extra,result,success)  
 if result.username_ then 
-zo = '*🚦 ⁞ معرفك  ⟀ *\n\n*🎖 ⁞ ➺⦅* [@'..result.username_..']* ⦆*\n' 
+zo = '*🚦 ⁞ معرفك  ⟀ *\n\n*🎖 ⁞ ~⪼⦅* [@'..result.username_..']* ⦆*\n' 
 else 
 zo = '*🎖 ⁞ انت لا تمتلك معرف في حسابك *\n✓' 
 end 
@@ -9028,23 +9028,23 @@ elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
 if tonumber(msg.sender_user_id_) == tonumber(972833270) then
-t = 'مطور السورس 🔱'
+t = 'مطور السورس'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي ✓'
 elseif VEERBOT:sismember(VEER_ID..'sudo:bot',msg.sender_user_id_) then
-t = 'المطور 🔰'
+t = 'المطور'
 elseif VEERBOT:sismember(VEER_ID..'moder'..msg.chat_id_,msg.sender_user_id_) then
-t = 'المنشئ 👮'
+t = 'المنشئ'
 elseif VEERBOT:sismember(VEER_ID..'modergroup'..msg.chat_id_,msg.sender_user_id_) then
-t = 'المدير 👦'
+t = 'المدير'
 elseif VEERBOT:sismember(VEER_ID..'mods:'..msg.chat_id_,msg.sender_user_id_) then
-t = 'الادمن 👨'
+t = 'الادمن'
 elseif VEERBOT:sismember(VEER_ID..'vip:groups',msg.sender_user_id_) then
-t = 'مميز عام 🌟'
+t = 'مميز عام'
 elseif VEERBOT:sismember(VEER_ID..'vip:group'..msg.chat_id_,msg.sender_user_id_) then
-t = 'عضو مميز ⭐'
+t = 'عضو مميز'
 else
-t = 'عضو 👶'
+t = 'عضو'
 end
 local zo = '\n🚦 ⁞ رتبة البوت ↫ ❲ {'..t..'} ❳\n🎖 ⁞ رتبتة الكروب ↫ ❲ ❛'..rtpa..'❜ ❳\n💥'
 monsend(msg,msg.chat_id_,zo,msg.sender_user_id_)   
@@ -9055,7 +9055,7 @@ VEERBOT:setex(VEER_ID.."CHENG:ID"..msg.chat_id_..""..msg.sender_user_id_,200,tru
 local tahaid= [[
 *🚦 ⁞ اهلا عزيزي المطور 
 🎖 ⁞ يمكنك استخدام الدوال الاتيه ↓
- ٴ━━━━━━━━━━
+ ➖➖➖➖➖➖➖➖➖
 1• دالة طبع الايدي ↫* `IDGET`
 *2• دالة طبع المعرف ↫* `USERGET`
 *3• دالة طبع رتبة البوت ↫* `RTBGET`
@@ -9442,7 +9442,7 @@ VEER_send(msg.chat_id_,msg.id_,"*🚦 ⁞ لا تستطيع منعي من ارس
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-VEER_send(msg.chat_id_,msg.id_,"*🚦 ⁞ عذرا لا تستطيع منع ↫ { المنشئين والمطورين } \n👨🏻‍✈️*")   
+VEER_send(msg.chat_id_,msg.id_,"*?? ⁞ عذرا لا تستطيع منع ↫ { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -10422,14 +10422,14 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🎖 ⁞ تم مسح {'..num..'} من ا
 end
 if text == 'صلاحيات الحظر' and is_owner(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'SET:BAN'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه اصحاب صلاحية الحظر *\n*ٴ━━━━━━━━━*\n' 
+local t = '*🚦 ⁞ قائمه اصحاب صلاحية الحظر *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
 local username = taha
-t = t..'*'..k.." ➺* ❲["..username.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..username.."](tg://user?id="..v..")❳\n"   
 else
-t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"   
+t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"   
 end
 end 
 if #list == 0 then 
@@ -10451,7 +10451,7 @@ VEERBOT:srem(VEER_ID.."bot:gpsby:id:add",idch)
 VEERBOT:srem(VEER_ID.."bot:gps:id", idch) 
 tdcli_function({ID="GetChat",chat_id_ = '-100'..data.channel_.id_},function(arg,data)  linkgp = VEERBOT:get(VEER_ID.."link:group"..idch)  
 if linkgp then  link = '['..data.title_..']('..linkgp..')'  else  link = '`'..(data.title_ or '...')..'`' end
-taha = '\n*🎗 ⁞ اهلا عزيزي المطور *\nٴ━━━━━━━━━━━━'..
+taha = '\n*🎗 ⁞ اهلا عزيزي المطور *\n➖➖➖➖➖➖➖➖➖'..
 '\n*🚦 ⁞ لقد تم طردي من مجموعه جديده *'..
 '\n*🔖 ⁞* معلومات المجموعه '..
 '\n*🎖 ⁞* الايدي ↫ ❪`'..data.id_..'`❫'..
