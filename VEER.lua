@@ -628,35 +628,6 @@ return
 t 
 end
 
-local msg = data.message_
-text = msg.content_.text_
-if text then 
-function VEER_ID(extra,result,success)
-if result.id_ then 
-local dx = VEERBOT:get("VEER_ID:name"..result.id_)
-if not result.first_name_ then 
-if dx then 
-VEERBOT:del("VEER_ID:name"..result.id_) 
-end
-end
-if result.first_name_ then 
-if dx and dx ~= result.first_name_ then 
-local faeder_text = {
-"اسمك الجديد { "..result.first_name_.." }\n ليش غيرته 🌚😹",
-"اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ☹️👌",
-"ليش غيرت اسمك { "..result.first_name_.." }\n قطيت احد حبي ؟ 🌚😹",
-"اسمك الجديد يخبل ضلعي 🤭😹{ "..result.first_name_.." }", 
-}
-dxx = math.random(#VEER_ID_text)
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, VEER_ID_text[dxx], 1, 'html')
-end 
-VEERBOT:set("VEER_ID:name"..result.id_, result.first_name_) 
-end
-end
-end
-getUser(msg.sender_user_id_, faeder)
-end
-
 function sendaction(chat_id, action, progress) 
 tdcli_function ({ ID = "SendChatAction",  chat_id_ = chat_id, action_ = {  ID = "SendMessage" .. action .. "Action", progress_ = progress or 100} }, dl_cb, nil) 
 end
@@ -823,6 +794,35 @@ if type == 'del' then
 delete_msg(msg.chat_id_,{[0] = msg.id_})    
 return false  
 end 
+end
+
+local msg = data.message_
+text = msg.content_.text_
+if text then 
+function VEER_ID(extra,result,success)
+if result.id_ then 
+local dx = VEERBOT:get("VEER_ID:name"..result.id_)
+if not result.first_name_ then 
+if dx then 
+VEERBOT:del("VEER_ID:name"..result.id_) 
+end
+end
+if result.first_name_ then 
+if dx and dx ~= result.first_name_ then 
+local faeder_text = {
+"اسمك الجديد { "..result.first_name_.." }\n ليش غيرته 🌚😹",
+"اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ☹️👌",
+"ليش غيرت اسمك { "..result.first_name_.." }\n قطيت احد حبي ؟ 🌚😹",
+"اسمك الجديد يخبل ضلعي 🤭😹{ "..result.first_name_.." }", 
+}
+dxx = math.random(#VEER_ID_text)
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, VEER_ID_text[dxx], 1, 'html')
+end 
+VEERBOT:set("VEER_ID:name"..result.id_, result.first_name_) 
+end
+end
+end
+getUser(msg.sender_user_id_, faeder)
 end
 
 local function trigger_anti_spam(msg,type)
