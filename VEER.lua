@@ -4892,28 +4892,6 @@ else
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚦 ⁞* لا يوجد قوانين هنا \n💥",  1, "md")   
 end    
 end
-if text:match("ڄ") or text:match("ڬ") or text:match("ٺ") or text:match("چ") or text:match("ڇ") or text:match("ڿ") or text:match("ڀ") or text:match("ڎ") or text:match(" ݫ") or text:match("ژ") or text:match("ڟ") or text:match("ݜ") or text:match("ڸ") or text:match("پ") or text:match("۴") or text:match("مک") or text:match("زدن") or text:match("سکس") or text:match("سکسی") or text:match("کسی") or text:match("دخترا") or text:match("دیوث") or text:match("مک") or text:match("زدن") or text:match("سکس") or text:match("سکسی") or text:match("کسی") or text:match("دخترا") or text:match("دیوث") or text:match("کلیپشن") or text:match("خوششون") or text:match("میدا") or text:match("که") or text:match("بدانیم") or text:match("باید") or text:match("زناشویی") or text:match("آموزش") and is_owner(msg.sender_user_id_, msg.chat_id_) then
-if VEERBOT:get(VEER_ID.."farsi"..msg.chat_id_) and not is_owner(msg.sender_user_id_, msg.chat_id_) then
-local id = msg.id_
-local msgs = { [0] = id}
-local chat = msg.chat_id_
-if VEERBOT:get(VEER_ID..'far'..msg.chat_id_) == 'thhhh' then
-delete_msg(chat, msgs)
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚦⁞ ممنوع التكلم باللغه الفارسيه هنا •', 1, 'md') 
-elseif VEERBOT:get(VEER_ID..'far'..msg.chat_id_) == 'bedthhh' then
-delete_msg(chat, msgs)
-end
-end
-end
-if text:match("ڄ") or text:match("ڬ") or text:match("ٺ") or text:match("چ") or text:match("ڇ") or text:match("ڿ") or text:match("ڀ") or text:match("ڎ") or text:match(" ݫ") or text:match("ژ") or text:match("ڟ") or text:match("ݜ") or text:match("ڸ") or text:match("پ") or text:match("۴") or text:match("مک") or text:match("زدن") or text:match("سکس") or text:match("سکسی") or text:match("کسی") or text:match("دخترا") or text:match("دیوث") or text:match("مک") or text:match("زدن") or text:match("سکس") or text:match("سکسی") or text:match("کسی") or text:match("دخترا") or text:match("دیوث") or text:match("کلیپشن") or text:match("خوششون") or text:match("میدا") or text:match("که") or text:match("بدانیم") or text:match("باید") or text:match("زناشویی") or text:match("آموزش") and is_owner(msg.sender_user_id_, msg.chat_id_) then
-if VEERBOT:get(VEER_ID.."farsiban"..msg.chat_id_) and not is_owner(msg.sender_user_id_, msg.chat_id_) then
-local id = msg.id_
-local msgs = { [0] = id}
-local chat = msg.chat_id_
-delete_msg(chat, msgs)
-chat_kick(msg.chat_id_, msg.sender_user_id_)
-end 
-end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[ 
 📮¦ اهلا بك في سورس فير 🍃
@@ -10503,25 +10481,6 @@ end
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 SEND_FILES(msg)
-end
-end
-
-if lockptf[2] == "الفارسيه" then
-if not VEERBOT:get(VEER_ID..'farsi'..msg.chat_id_) then
-local VEER_ID = '🚦⁞ رتبتك : '..tar..' •\n🎖⁞ تم قفل الفارسيه • \n🎗⁞ بواسطه «'..msg.sender_user_id_..'» •'
-VEERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, VEER_ID, 58, string.len(msg.sender_user_id_))
-VEERBOT:set(VEER_ID..'farsi'..msg.chat_id_,true)
-else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل الفارسيه سابقا ✔️', 1, 'md')
-end
-end
-if text == "الفارسيه بالطرد" and is_mod (msg) then
-if not VEERBOT:get(VEER_ID..'farsiban'..msg.chat_id_) then
-local VEER_ID = '🚦⁞ رتبتك : '..tar..' •\n🎖⁞ تم قفل الفارسيه بالطرد • \n🎗⁞ بواسطه «'..msg.sender_user_id_..'» •'
-VEERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, VEER_ID, 65, string.len(msg.sender_user_id_))
-VEERBOT:set(VEER_ID..'farsiban'..msg.chat_id_,true)
-else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل الفارسيه بالطرد سابقا ✔️', 1, 'md')
 end
 end
 function tdcli_update_callback(data)  
