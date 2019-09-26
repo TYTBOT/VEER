@@ -4869,11 +4869,11 @@ local text = [[
 
 🌐┇VEER TEAM
 
-🦁┇[قناه شروحات سورس](https://t.me/joinchat/AAAAAEelt2Ukuq6VhrzIKA)
+🦁┇[قناه تحديثات سورس](https://t.me/joinchat/AAAAAEelt2Ukuq6VhrzIKA)
 
-🔎┇[طريقه التنصيب](https://t.me/joinchat/AAAAAEelt2Ukuq6VhrzIKA)
+🔎┇[طريقه التنصيب](https://t.me/TEAMVEER/4)
 
-📮┇[مطور السورس](t.me/PP5SS)
+📮┇[تواصل السورس](t.me//VEERTEAMBOT)
 ]] 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
@@ -7019,7 +7019,7 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'الادمنيه' and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'mods:'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه ادمنيه المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
+local t = '*👥 ⁞ قائمه ادمنيه المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
@@ -7030,7 +7030,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🎖 ⁞* لا يوجد ادمنيه في هاذه المجموعه' 
+t = '*🚦 ⁞* لا يوجد ادمنيه في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7070,7 +7070,7 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المطورين' and is_devtaha(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'sudo:bot')
-local t = '*🚦 ⁞ قائمه مطورين البوت *\n*➖➖➖➖➖➖➖➖➖*\n' 
+local t = '*👥 ⁞ قائمه مطورين البوت *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
@@ -7087,7 +7087,7 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المدراء' and is_owner(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'modergroup'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه مدراء المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
+local t = '*👥 ⁞ قائمه مدراء المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
@@ -7121,7 +7121,7 @@ VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
 if text == 'المنشئين' and is_owner(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'moder'..msg.chat_id_)
-local t = '*🚦 ⁞ قائمه منشئين المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
+local t = '*👥 ⁞ قائمه منشئين المجموعه *\n*➖➖➖➖➖➖➖➖➖*\n' 
 for k, v in pairs(list) do 
 local taha = VEERBOT:get(VEER_ID.."user:Name" .. v)
 if taha then
