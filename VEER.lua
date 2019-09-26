@@ -446,54 +446,54 @@ end
 function formsgg(msgs)  
 local taha = ''  
 if msgs < 100 then 
-taha = 'غير متفاعل ❌' 
+taha = 'غير متفاعل' 
 elseif msgs < 200 then 
-taha = 'بده يتحسن ✔' 
+taha = 'بده يتحسن' 
 elseif msgs < 400 then 
-taha = 'شبه متفاعل ☄' 
+taha = 'شبه متفاعل' 
 elseif msgs < 700 then 
-taha = 'متفاعل ⭐' 
+taha = 'متفاعل' 
 elseif msgs < 1200 then 
-taha = 'متفاعل قوي 🌟' 
+taha = 'متفاعل قوي' 
 elseif msgs < 2000 then 
-taha = 'متفاعل جدا 🎖' 
+taha = 'متفاعل جدا' 
 elseif msgs < 3500 then 
-taha = 'اقوى تفاعل 🌞'  
+taha = 'اقوى تفاعل'  
 elseif msgs < 4000 then 
-taha = 'متفاعل نار 💥' 
+taha = 'متفاعل نار' 
 elseif msgs < 4500 then 
-taha = 'قمة التفاعل 💎' 
+taha = 'قمة التفاعل' 
 elseif msgs < 5500 then 
-taha = 'اقوى متفاعل 👑' 
+taha = 'اقوى متفاعل' 
 elseif msgs < 7000 then 
-taha = 'ملك التفاعل 🎭' 
+taha = 'ملك التفاعل' 
 elseif msgs < 9500 then 
 taha = 'امبروطور التفاعل' 
 elseif msgs < 10000000000 then 
-taha = 'رب التفاعل 😂💜'  
+taha = 'رب التفاعل'  
 end 
 return taha 
 end
 function formsggroup(msgs) 
 local taha = ''  
 if msgs < 100 then 
-taha = 'كلش ضعيف 😱' 
+taha = 'كلش ضعيف' 
 elseif msgs < 500 then 
-taha = 'ضعيف 😩' 
+taha = 'ضعيف' 
 elseif msgs < 1500 then 
-taha = 'غير متفاعله 😰' 
+taha = 'غير متفاعله' 
 elseif msgs < 5000 then 
-taha = 'متوسط 😼' 
+taha = 'متوسط' 
 elseif msgs < 10000 then 
-taha = 'متفاعله 😽' 
+taha = 'متفاعله' 
 elseif msgs < 50000 then 
-taha = 'في قمة التفاعل 😍' 
+taha = 'في قمة التفاعل' 
 elseif msgs < 90000 then 
-taha = 'كروب التفاعل 😻'  
+taha = 'كروب التفاعل'  
 elseif msgs < 100000 then 
 taha = 'نار وشرار  ✓' 
 elseif msgs < 10000000 then 
-taha = 'اقوه تفاعل بتلكرام 🔥' 
+taha = 'اقوه تفاعل بتلكرام' 
 end 
 return taha 
 end
@@ -556,9 +556,9 @@ return t
 end
 function get_rtpa(chat_id,user_id)
 if tonumber(user_id) == tonumber(SUDO) then
-t = 'مطور اساسي 💥'
+t = 'مطور اساسي'
 elseif VEERBOT:sismember(VEER_ID..'sudo:bot',user_id) then
-t = 'مطور البوت 👨🏻‍💻'
+t = 'مطور البوت'
 elseif VEERBOT:sismember(VEER_ID..'moder'..chat_id,user_id) then
 t = 'منشئ 👨🏻‍✈️'
 elseif VEERBOT:sismember(VEER_ID..'modergroup'..chat_id,user_id) then
