@@ -1766,7 +1766,7 @@ local pvstart = VEERBOT:get(VEER_ID.."pvstart")
 if pvstart then    
 VEER_sendMsg(msg.sender_user_id_, 0, 1, ''..check_markdown(pvstart)..'', 1, "md")    
 else    
-VEER_sendMsg(msg.sender_user_id_, msg.id_, 1, '\n🎖* ⁞* تم ارسال رسالتك الى المطور\n*⚠️ ⁞* اشترك في قناة المطور \n*🚸 ⁞* [اضغط هنا للدخول الى قناة](t.me/ofliine) \n', 1, "md")    
+VEER_sendMsg(msg.sender_user_id_, msg.id_, 1, '\n🎖* ⁞* تم ارسال رسالتك الى المطور\n*⚠️ ⁞* اشترك في قناة المطور \n*🚸 ⁞* [اضغط هنا للدخول الى قناة](t.me/PP5SS) \n', 1, "md")    
 end     
 if not VEERBOT:sismember(VEER_ID.."usersbot",msg.chat_id_) then    
 VEERBOT:sadd(VEER_ID.."usersbot",msg.chat_id_)    
@@ -4887,7 +4887,7 @@ local text = [[
 `rm -rf VEER`
 ٴ━━━━━━━━━━
 ⚜¦ للمزيد من المعلومات راسلنا
-💥¦ مطور السورس ↫ @OFLIINE
+💥¦ مطور السورس ↫ @PP5SS
 ]] 
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
