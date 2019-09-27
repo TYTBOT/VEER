@@ -796,6 +796,83 @@ return false
 end 
 end
 
+local function faederdx(chat_id, reply_to_message_id, text)
+local TextParseMode = {ID = "TextParseModeMarkdown"}
+tdcli_function ({ID = "SendMessage",chat_id_ = chat_id,reply_to_message_id_ = reply_to_message_id,disable_notification_ = 1,from_background_ = 1,reply_markup_ = nil,input_message_content_ = {ID = "InputMessageText",text_ = text,disable_web_page_preview_ = 1,clear_draft_ = 0,entities_ = {},parse_mode_ = TextParseMode,},}, dl_cb, nil)
+end
+function download_to_file(url, file_path) 
+local respbody = {} 
+local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
+local response = nil 
+options.redirect = false 
+response = {https.request(options)} 
+local code = response[2] 
+local headers = response[3] 
+local status = response[4] 
+if code ~= 200 then return false, code 
+end 
+file = io.open(file_path, "w+") 
+file:write(table.concat(respbody)) 
+file:close() 
+return file_path, code 
+end 
+function add_file(msg,chat,ID_FILE,File_Name)
+if File_Name:match('.json') then
+if File_Name:lower():match('(%d+)') ~= VEER_ID:lower() then 
+faederdx(chat,msg.id_,"*📤┇ هذا الملف ليس تابع لهذا السورس *")   
+return false 
+end      
+local File = json:decode(https.request('https://api.telegram.org/bot' .. chaneel .. '/getfile?file_id='..ID_FILE) ) 
+download_to_file('https://api.telegram.org/file/bot'..chaneel..'/'..File.result.file_path, ''..File_Name) 
+faederdx(chat,msg.id_,"*📤┇ جاري رفع الملف *")   
+else
+faederdx(chat,msg.id_,"*📤┇ غير صحيح *")  
+end      
+local info_file = io.open('./'..VEER_ID..'.json', "r"):read('*a')
+local groups = JSON.decode(info_file)
+faederdx(chat,msg.id_,"تم رفع النسخه")   
+vardump(groups) 
+for idg,v in pairs(groups.GP_BOT) do
+VEERBOT:sadd(VEER_ID.."add:num",idg)
+VEERBOT:set(VEER_ID.."add:bot:group:"..idg,true)
+VEERBOT:sadd(VEER_ID.."botgps:"..idg,true)
+VEERBOT:sadd(VEER_ID.."bot:gpsby:id:add:"..idg,true)
+VEERBOT:sadd(VEER_ID.."VEER_ID:bot:gps:id:"..idg,true)
+VEERBOT:sadd(VEER_ID.."VEER_ID:bot:gpsby:id:"..idg,true)
+if v.MNSH then 
+for k,idmsh in pairs(v.MNSH) do
+VEERBOT:sadd(VEER_ID..'moder:'..idg,idmsh)  
+print('تم رفع '..k..' منشئين')
+end
+end
+if v.MDER then
+for k,idmder in pairs(v.MDER) do
+VEERBOT:sadd(VEER_ID..'modergroup:'..idg,idmder)  
+print('تم رفع '..k..' مدراء')
+end
+end
+if v.MOD then
+for k,idmod in pairs(v.MOD) do
+vardump(idmod)
+VEERBOT:sadd(VEER_ID..'mods:'..idg,idmod)  
+print('تم رفع '..k..' ادمنيه')
+end
+end
+if v.VIP then
+for k,idvip in pairs(v.VIP) do
+VEERBOT:sadd(VEER_ID..'vip:group:'..idg,idvip)  
+print('تم رفع '..k..' مميزين')
+end
+end
+if v.linkgroup then
+if v.linkgroup ~= "" then
+VEERBOT:set(VEER_ID.."get:link:gp"..idg,v.linkgroup)   
+print('تم وضع رابط ')
+end
+end
+end
+end
+
 local function trigger_anti_spam(msg,type)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if type == 'kick' then 
@@ -3913,6 +3990,90 @@ return false
 end
 end
 --======================
+if text == 'جلب نسخه الكروبات' and tonumber(msg.sender_user_id_) and is_devtaha(msg) then 
+local list = VEERBOT:smembers(VEER_ID..'botgps')
+local t = '{"BOT_ID": '..VEER_ID..',"GP_BOT":{'  
+for k,v in pairs(list) do   
+NAME = title_name(v) or ''
+NAME = NAME:gsub('"','') 
+NAME = NAME:gsub('#','')
+NAME = NAME:gsub([[\]],'')
+link = VEERBOT:get(VEER_ID.."get:link:gp"..v) or ''
+welcome = VEERBOT:get(VEER_ID..'welcome:'..v) or ''
+MNSH = VEERBOT:smembers(VEER_ID..'moder:'..v)
+MDER = VEERBOT:smembers(VEER_ID..'modergroup:'..v)
+MOD = VEERBOT:smembers(VEER_ID..'mods:'..v)
+VIP = VEERBOT:smembers(VEER_ID..'vip:group:'..v)
+if k == 1 then
+t = t..'"'..v..'":{"GP_NAME":"'..NAME..'",'
+else
+t = t..',"'..v..'":{"GP_NAME":"'..NAME..'",'
+end
+
+if #VIP ~= 0 then 
+t = t..'"VIP":['
+for k,v in pairs(VIP) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MOD ~= 0 then
+t = t..'"MOD":['
+for k,v in pairs(MOD) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MDER ~= 0 then
+t = t..'"MDER":['
+for k,v in pairs(MDER) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+if #MNSH ~= 0 then
+t = t..'"MNSH":['
+for k,v in pairs(MNSH) do
+if k == 1 then
+t =  t..'"'..v..'"'
+else
+t =  t..',"'..v..'"'
+end
+end   
+t = t..'],'
+end
+t = t..'"linkgroup":"'..link..'"}'
+end
+t = t..'}}'
+local File = io.open('./'..bot_id..'.json', "w")
+File:write(t)
+File:close()
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..VEER_ID..'.json', '📤┇ عدد كروبات البوت  '..#list..'',dl_cb, nil)
+end
+if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) and is_devtaha(msg) then 
+if tonumber(msg.reply_to_message_id_) > 0 then
+function by_reply(extra, result, success)   
+if result.content_.document_ then 
+local ID_FILE = result.content_.document_.document_.persistent_id_ 
+local File_Name = result.content_.document_.file_name_
+add_file(msg,msg.chat_id_,ID_FILE,File_Name)
+end   
+end
+tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
+end
+end
 if text ==('ايديي') then   
 VEER_sendMsg(msg.chat_id_, msg.id_,  1, '*🚦 ⁞ اضغط على الايدي ليتم نسخه ➘*\n\n*🎖 ⁞ الايدي ◂⊱ *`'..msg.sender_user_id_..'` *⊰▸*\n✓', 1, 'md')   
 end
