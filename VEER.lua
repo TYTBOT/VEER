@@ -4895,7 +4895,7 @@ end
 if num2 == 0 then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*⚠️┇لا توجد ادمنية ليتم رفعهم*\n✓', 1, 'md') 
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*⚠️┇تمت ترقية •⊱ '..num2..' ⊰• من ادمنية المجموعه*\n✓', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*✔️┇تمت ترقية •⊱ '..num2..' ⊰• من ادمنية المجموعه*\n✓', 1, 'md') 
 end
 end,nil)   
 end
@@ -4945,7 +4945,7 @@ if b.username_ == false then
 local text = '✔️┇تم ترقية منشئ المجموعه \n•⊱ '..CatchName(b.first_name_,50)..' ⊰• \n✓'
 VEERmonshn(msg.chat_id_, owner_id, msg.id_, text, 31, utf8.len(b.first_name_)) 
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*⚠️┇تم ترقية منشئ المجموعه \n •⊱* ['..CatchName(b.first_name_,20)..'](t.me/'..b.username_..') *⊰• *\n✓', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*✔️┇تم ترقية منشئ المجموعه \n •⊱* ['..CatchName(b.first_name_,20)..'](t.me/'..b.username_..') *⊰• *\n✓', 1, 'md') 
 VEERBOT:set(VEER_ID.."user:Name"..b.id_,"@"..b.username_)
 end
 end,nil)   
@@ -4981,7 +4981,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*⚠️┇* لا يوجد رابط ال�
 end            
 end
 if text and text:match("^مسح الرابط$") and is_mod(msg) then              
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*⚠️┇* تم مسح رابط المجموعه \n✓", 1 , "md")           
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*✔️┇* تم مسح رابط المجموعه \n✓", 1 , "md")           
 VEERBOT:del(VEER_ID.."link:group" .. msg.chat_id_)       
 end
 if text=="اذاعه بالتوجيه" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then 
@@ -5124,7 +5124,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✓*┇*  تم تعطيل الترحيب'
 end
 if text ==('مسح الترحيب') and is_mod(msg) then 
 VEERBOT:del(VEER_ID..'welcome:'..msg.chat_id_,welcome) 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✓*┇*  تم مسح ترحيب المجموعه', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✔️*┇*  تم مسح ترحيب المجموعه', 1, 'md') 
 end
 if text and text:match("^ضع صوره") and is_mod(msg) and msg.reply_to_message_id_ == 0 then  
 VEERBOT:set(VEER_ID..'setphoto'..msg.chat_id_..':'..msg.sender_user_id_,true) 
@@ -7174,7 +7174,7 @@ t = t..'*'..k.." ~⪼* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد محظورين في هاذه المجموعه' 
+t = '*🚫┇* لا يوجد محظورين في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7191,7 +7191,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*⚠️┇* لا يوجد ادمنيه في هاذه المجموعه' 
+t = '*🚫┇* لا يوجد ادمنيه في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7208,7 +7208,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد مميزين في هاذه المجموعه' 
+t = '*🚫┇* لا يوجد مميزين في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7225,7 +7225,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد مميزين عام في البوت' 
+t = '*🚫┇* لا يوجد مميزين عام في البوت' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7242,7 +7242,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد مطورين في البوت' 
+t = '*🚫┇* لا يوجد مطورين في البوت' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7259,7 +7259,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد مدراء في هاذه المجموعه' 
+t = '*🚫┇* لا يوجد مدراء في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end 
@@ -7276,7 +7276,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد محظورين عام في البوت' 
+t = '*🚫┇* لا يوجد محظورين عام في البوت' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7293,7 +7293,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد منشئين في هاذه المجموعه' 
+t = '*🚫┇* لا يوجد منشئين في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7310,7 +7310,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد مكتومين في هاذه المجموعه' 
+t = '*🚫┇* لا يوجد مكتومين في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7327,7 +7327,7 @@ t = t..'*'..k.." ~⪼* ❲ ["..v.."](tg://user?id="..v..") ❳\n"
 end
 end 
 if #list == 0 then 
-t = '*📟┇* لا يوجد مقيدين في هاذه المجموعه' 
+t = '*🚫┇* لا يوجد مقيدين في هاذه المجموعه' 
 end 
 VEER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7388,7 +7388,7 @@ if text and text:match('^حظر عام @(.*)') and is_devtaha(msg) then
 local username = text:match('^حظر عام @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🎫┇المعرف لا يوجد فيه حساب *'
+local taha = '*🚫┇المعرف لا يوجد فيه حساب *'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
