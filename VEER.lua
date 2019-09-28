@@ -5116,11 +5116,11 @@ end
 end
 if text ==('تفعيل الترحيب') and is_mod(msg) then 
 VEERBOT:set(VEER_ID..'add:welc:'..msg.chat_id_,'add') 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✓*┇*  تم تفعيل الترحيب', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,✔️'*┇*  تم تفعيل الترحيب', 1, 'md') 
 end
 if text ==('تعطيل الترحيب') and is_mod(msg) then 
 VEERBOT:set(VEER_ID..'add:welc:'..msg.chat_id_,'rem') 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✓*┇*  تم تعطيل الترحيب', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✔️*┇*  تم تعطيل الترحيب', 1, 'md') 
 end
 if text ==('مسح الترحيب') and is_mod(msg) then 
 VEERBOT:del(VEER_ID..'welcome:'..msg.chat_id_,welcome) 
@@ -5438,7 +5438,7 @@ tdcli_function ({ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID },
 function(arg,tah)  
 if tah.invite_link_ then
-linkgn = '⚠️*┇* اسم الكروب ➘\n ٴ❴ ['..data.title_..']('..tah.invite_link_..') ❵ ~⪼'
+linkgn = '🖲*┇* اسم الكروب ➘\n ٴ❴ ['..data.title_..']('..tah.invite_link_..') ❵ ~⪼'
 else
 linkgn = '⚠️*┇* اسم الكروب ➘\n ٴ❴ `'..data.title_..'` ❵ ~⪼'
 end
@@ -5457,7 +5457,7 @@ local text =
 ' ❫*\n'..'*📟┇تعديل الميديا ↫❪ '..lock_edit_med..
 ' ❫*\n➖➖➖➖➖➖➖➖➖'..
 '\n'..'*📟┇الكلايش ↫❪ '..lock_spam..
-' ❫*\n'..'*??┇الكيبورد ↫❪ '..lock_inlin..
+' ❫*\n'..'*📟┇الكيبورد ↫❪ '..lock_inlin..
 ' ❫*\n'..'*📟┇الاغاني ↫❪ '..lock_vico..
 ' ❫*\n'..'*📟┇المتحركه ↫❪ '..lock_gif..
 ' ❫*\n'..'*📟┇الملفات ↫❪ '..lock_file..
