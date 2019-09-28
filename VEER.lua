@@ -4483,7 +4483,7 @@ tdcli_function ({ID = "GetUser",user_id_ = kk.id_},function(arg,data)
 if pho.total_count_ == 0 then
 photouser1 = ''
 else
-photouser1 = '\n🎆┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫'
+photouser1 = '\n📦┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫'
 end
 if VEERBOT:sismember(VEER_ID..'VEER:gbaned',kk.id_) then
 kkeed = 'محظور عام'
@@ -4521,15 +4521,15 @@ if data.first_name_ == false then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*❓┇الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
 return false  end
 text = '*🎟┇ايديه ↫ ❪* `'..kk.id_..
-'` ❫\n💠*┇معـرفه ↫ ❪* [@'..data.username_..']'..
-' ❫\n⚜*┇اسمه ↫ ❪* `'..CatchName(data.first_name_,20)..
-'` ❫\n🕹*┇رتبـة الكروب ↫ ❪ '..rtpa..
+'` ❫\n🎫*┇معـرفه ↫ ❪* [@'..data.username_..']'..
+' ❫\n📜*┇اسمه ↫ ❪* `'..CatchName(data.first_name_,20)..
+'` ❫\n🗃*┇رتبـة الكروب ↫ ❪ '..rtpa..
 ' ❫\n📟┇رتبـة البوت ↫ ❪ '..t..
 ' ❫\n💌┇رسـائله ↫ ❪ '..(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)..
-' ❫\n🗳┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
+' ❫\n📖┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
 '\n🚫┇نوع القيود ↫ ❪ '..kkeed..
-' ❫\n📲┇التواجد ↫ ❪ '..tt..
-' ❫\n🔋┇نوع حسابه ↫ ❪ '..acca..' ❫*'
+' ❫\n📔┇التواجد ↫ ❪ '..tt..
+' ❫\n🗄┇نوع حسابه ↫ ❪ '..acca..' ❫*'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end,nil)
 end,nil)
@@ -4571,7 +4571,7 @@ return false  end
 if pho.total_count_ == 0 then
 photouser = ''
 else
-photouser = '\n🎆┇عدد صوره •⊱ '..pho.total_count_..' ⊰•'
+photouser = '\n📦┇عدد صوره •⊱ '..pho.total_count_..' ⊰•'
 end
 if pho.total_count_ == 0 then
 photouser1 = ''
@@ -4619,22 +4619,22 @@ text = '🎟┇ايديه ↫ ❪ '..iduser..
 ' }❫\n🗃┇رتبـة الكروب ↫ ❪ '..rtpa..
 ' ❫\n📟┇رتبـة البوت ↫ ❪ '..t..
 ' ❫\n💌┇رسـائله ↫ ❪ '..(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)..
-' ❫\n🗳┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
+' ❫\n📖┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
 '\n🚫┇نوع القيود ↫ ❪ '..kkeed..
-' ❫\n📲┇التواجد ↫ ❪ '..tt..
-' ❫\n🔋┇نوع حسابه ↫ ❪ '..acca..' ❫'
+' ❫\n📔┇التواجد ↫ ❪ '..tt..
+' ❫\n🗄┇نوع حسابه ↫ ❪ '..acca..' ❫'
 monsend(msg,msg.chat_id_,text,iduser) 
 else
 text = '*🎟┇ايديه ↫ ❪* `'..iduser..
-'` ❫\n💠*┇معـرفه ↫ ❪* [@'..data.username_..']'..
-' ❫\n⚜*┇اسمه ↫ ❪* `'..CatchName(data.first_name_,20)..
-'` ❫\n🕹*┇رتبـة الكروب ↫ ❪ '..rtpa..
+'` ❫\n🎫*┇معـرفه ↫ ❪* [@'..data.username_..']'..
+' ❫\n📜*┇اسمه ↫ ❪* `'..CatchName(data.first_name_,20)..
+'` ❫\n🗃*┇رتبـة الكروب ↫ ❪ '..rtpa..
 ' ❫\n📟┇رتبـة البوت ↫ ❪ '..t..
 ' ❫\n💌┇رسـائله ↫ ❪ '..(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)..
-' ❫\n🗳┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
+' ❫\n📖┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
 '\n🚫┇نوع القيود ↫ ❪ '..kkeed..
-' ❫\n📲┇التواجد ↫ ❪ '..tt..
-' ❫\n🔋┇نوع حسابه ↫ ❪ '..acca..' ❫*'
+' ❫\n📔┇التواجد ↫ ❪ '..tt..
+' ❫\n🗄┇نوع حسابه ↫ ❪ '..acca..' ❫*'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end
 end,nil)
@@ -4673,12 +4673,12 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 if pho.total_count_ == 0 then
 photouser = ''
 else
-photouser = '\n🎆┇عدد صوره •⊱ '..pho.total_count_..' ⊰•'
+photouser = '\n📦┇عدد صوره •⊱ '..pho.total_count_..' ⊰•'
 end
 if pho.total_count_ == 0 then
 photouser1 = ''
 else
-photouser1 = '\n🎆┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫'
+photouser1 = '\n📦┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫'
 end
 if VEERBOT:sismember(VEER_ID..'VEER:gbaned',result.sender_user_id_) then
 kkeed = 'محظور عام'
@@ -4721,22 +4721,22 @@ text = '🎟┇ايديه ↫ ❪ '..result.sender_user_id_..
 ' }❫\n🗃┇رتبـة الكروب ↫ ❪ '..rtpa..
 ' ❫\n📟┇رتبـة البوت ↫ ❪ '..t..
 ' ❫\n💌┇رسـائله ↫ ❪ '..(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)..
-' ❫\n🗳┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
+' ❫\n📖┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
 '\n🚫┇نوع القيود ↫ ❪ '..kkeed..
-' ❫\n📲┇التواجد ↫ ❪ '..tt..
-' ❫\n🔋┇نوع حسابه ↫ ❪ '..acca..' ❫'
+' ❫\n📔┇التواجد ↫ ❪ '..tt..
+' ❫\n🗄┇نوع حسابه ↫ ❪ '..acca..' ❫'
 monsend(msg,msg.chat_id_,text,data.id_) 
 else
 text = '*🎟┇ايديه ↫ ❪* `'..result.sender_user_id_..
-'` ❫\n💠*┇معـرفه ↫ ❪* [@'..data.username_..']'..
-' ❫\n⚜*┇اسمه ↫ ❪* `'..CatchName(data.first_name_,20)..
-'` ❫\n🕹*┇رتبـة الكروب ↫ ❪ '..rtpa..
+'` ❫\n🎫*┇معـرفه ↫ ❪* [@'..data.username_..']'..
+' ❫\n📜*┇اسمه ↫ ❪* `'..CatchName(data.first_name_,20)..
+'` ❫\n🗃*┇رتبـة الكروب ↫ ❪ '..rtpa..
 ' ❫\n📟┇رتبـة البوت ↫ ❪ '..t..
 ' ❫\n💌┇رسـائله ↫ ❪ '..(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)..
-' ❫\n🗳┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
+' ❫\n📖┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
 '\n🚫┇نوع القيود ↫ ❪ '..kkeed..
-' ❫\n📲┇التواجد ↫ ❪ '..tt..
-' ❫\n🔋┇نوع حسابه ↫ ❪ '..acca..' ❫*'
+' ❫\n📔┇التواجد ↫ ❪ '..tt..
+' ❫\n🗄┇نوع حسابه ↫ ❪ '..acca..' ❫*'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end
 end,nil)
@@ -4788,7 +4788,7 @@ user_id_ = tes.content_.entities_[0].user_id_
 if pho.total_count_ == 0 then
 photouser1 = ''
 else
-photouser1 = '\n🎆┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫'
+photouser1 = '\n📦┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫'
 end
 if VEERBOT:sismember(VEER_ID..'VEER:gbaned',tes.content_.entities_[0].user_id_) then
 kkeed = 'محظور عام'
@@ -4830,10 +4830,10 @@ text = '🎟┇ايديه ↫ ❪ '..tes.content_.entities_[0].user_id_..
 ' }❫\n🗃┇رتبـة الكروب ↫ ❪ '..rtpa..
 ' ❫\n📟┇رتبـة البوت ↫ ❪ '..t..
 ' ❫\n💌┇رسـائله ↫ ❪ '..(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)..
-' ❫\n🗳┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
+' ❫\n📖┇تفــاعله ↫ ❪ '..formsgg(msgss)..' ❫'..photouser1..
 '\n🚫┇نوع القيود ↫ ❪ '..kkeed..
-' ❫\n📲┇التواجد ↫ ❪ '..tt..
-' ❫\n🔋┇نوع حسابه ↫ ❪ '..acca..' ❫'
+' ❫\n📔┇التواجد ↫ ❪ '..tt..
+' ❫\n🗄┇نوع حسابه ↫ ❪ '..acca..' ❫'
 monsend(msg,msg.chat_id_,text,tes.content_.entities_[0].user_id_) 
 end,nil)
 end,nil)
@@ -4856,7 +4856,7 @@ end
 if text == 'الكروبات' and is_sudo(msg) then 
 local t = VEERBOT:scard(VEER_ID.."botgps")
 local y = VEERBOT:scard(VEER_ID.."bot:gpsby:id") 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*⚠️┇العدد الكلي للكروبات هو ↫ ❪'..(y)..'❫* \n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*🗄┇العدد الكلي للكروبات هو ↫ ❪'..(y)..'❫* \n', 1, 'md') 
 end
 if text == 'المشتركين' and is_sudo(msg) then     
 local addgrop = VEERBOT:scard(VEER_ID.."usersbot") or 0    
@@ -9038,7 +9038,7 @@ limit_ = 100
 },function(arg,pho) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ then
-usertaha = '\n*💠┇معـرفك ↫ ❪ *[@'..data.username_..']* ❫*'
+usertaha = '\n*🎫┇معـرفك ↫ ❪ *[@'..data.username_..']* ❫*'
 else
 usertaha = ''
 end
@@ -9052,7 +9052,7 @@ end
 if pho.total_count_ == 0 then
 photouser1 = ''
 else
-photouser1 = '\n*🎆┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫*'
+photouser1 = '\n*📦┇عدد صوره ↫ ❪ '..pho.total_count_..' ❫*'
 end
 local taha = '\n*⚠️┇اهلا عزيزي المستخدم ✓\n➖➖➖➖➖➖➖➖➖*'..'\n*🗯┇ايديـك ↫ ❪ '..msg.sender_user_id_..' ❫*'..usertaha..'\n*⚜┇اسمك ↫ ❪* `'..CatchNamee(data.first_name_,45)..'` *❫*'..'\n*📨┇رسـائلك ↫ ❪ '..tahamsg..' ❫*'..photouser1..'\n*📟┇رتبتـك ↫ ❪ '..t..' ❫*\n*⭐┇رتبة الكروب ↫ ❪ '..rtpa..' ❫*\n*🗳┇تفــاعلك ↫ ❪ '..formsgg(msguser)..' ❫*\n*⚠️┇نسبـة تفاعلك ↫ ❪ '..string.sub(nupmsgg, 1,5)..'% ❫*'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, ''..taha..'', 1, "md") 
@@ -9079,7 +9079,7 @@ end
 if text == "معرفي"  then  
 function getmepar(extra,result,success)  
 if result.username_ then 
-zo = '*⚠️┇معرفك  ⟀ *\n\n*📟┇~⪼⦅* [@'..result.username_..']* ⦆*\n' 
+zo = '*🎫┇معرفك  ⟀ *\n\n*📟┇~⪼⦅* [@'..result.username_..']* ⦆*\n' 
 else 
 zo = '*📟┇انت لا تمتلك معرف في حسابك *\n✓' 
 end 
