@@ -5124,7 +5124,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✓*┇*  تم تعطيل الترحيب'
 end
 if text ==('مسح الترحيب') and is_mod(msg) then 
 VEERBOT:del(VEER_ID..'welcome:'..msg.chat_id_,welcome) 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,🗑'*┇*  تم مسح ترحيب المجموعه', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🗑*┇*  تم مسح ترحيب المجموعه', 1, 'md') 
 end
 if text and text:match("^ضع صوره") and is_mod(msg) and msg.reply_to_message_id_ == 0 then  
 VEERBOT:set(VEER_ID..'setphoto'..msg.chat_id_..':'..msg.sender_user_id_,true) 
