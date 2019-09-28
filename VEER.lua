@@ -5124,7 +5124,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✓*┇*  تم تعطيل الترحيب'
 end
 if text ==('مسح الترحيب') and is_mod(msg) then 
 VEERBOT:del(VEER_ID..'welcome:'..msg.chat_id_,welcome) 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✔️*┇*  تم مسح ترحيب المجموعه', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,🗑'*┇*  تم مسح ترحيب المجموعه', 1, 'md') 
 end
 if text and text:match("^ضع صوره") and is_mod(msg) and msg.reply_to_message_id_ == 0 then  
 VEERBOT:set(VEER_ID..'setphoto'..msg.chat_id_..':'..msg.sender_user_id_,true) 
@@ -5156,7 +5156,7 @@ VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end 
 end
 if text ==('مسح المطرودين') and is_monsh(msg) then local function delbans(extra, result)  if not msg.can_be_deleted_ == true then  VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚨┇* تنبيــه انا لست ادمن يرجى ترقيتي ادمن هنا \n", 1, "md") else  local num = 0 for k,y in pairs(result.members_) do num = num + 1  changeChatMemberStatus(msg.chat_id_, y.user_id_, 'Left', dl_cb, nil)  end  VEER_sendMsg(msg.chat_id_, msg.id_,  1,'تم الغاء الحظر عن *('..num..')* اشخاص \n', 1, 'md') end  end  getChannelMembers(msg.chat_id_, 0, 'Kicked', 200000, delbans, {chat_id_ = msg.chat_id_, msg_id_ = msg.id_})    end
-if text ==('مسح المحذوفين') and is_monsh(msg) then local function deleteaccounts(extra, result) if not msg.can_be_deleted_ == true then VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚨┇* تنبيــه انا لست ادمن يرجى ترقيتي ادمن هنا 👮\n", 1, "md") else for k,v in pairs(result.members_) do  local function cleanaccounts(extra, result) if not result.first_name_ then changeChatMemberStatus(msg.chat_id_, result.id_, "Kicked") end end  getUser(v.user_id_, cleanaccounts, nil) end  VEER_sendMsg(msg.chat_id_, msg.id_, 0,'✓*┇*  تم مسح الحسابات المحذوفه', 1, 'md') end end  tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 1000}, deleteaccounts, nil) end 
+if text ==('مسح المحذوفين') and is_monsh(msg) then local function deleteaccounts(extra, result) if not msg.can_be_deleted_ == true then VEER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚨┇* تنبيــه انا لست ادمن يرجى ترقيتي ادمن هنا 👮\n", 1, "md") else for k,v in pairs(result.members_) do  local function cleanaccounts(extra, result) if not result.first_name_ then changeChatMemberStatus(msg.chat_id_, result.id_, "Kicked") end end  getUser(v.user_id_, cleanaccounts, nil) end  VEER_sendMsg(msg.chat_id_, msg.id_, 0,'🗑*┇*  تم مسح الحسابات المحذوفه, 1, 'md') end end  tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 1000}, deleteaccounts, nil) end 
 if is_mod(msg) then 
 local function getadd_or_rem(taha)     
 if taha == 'welcome' then     
@@ -5757,7 +5757,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID..'mutes'..msg.chat_id_,v) 
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المكتومين *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المكتومين *\n', 1, 'md') 
 end 
 if text ==('مسح المحظورين') and is_mod(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'VEER:baned'..msg.chat_id_) 
@@ -5769,7 +5769,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID..'VEER:baned'..msg.chat_id_,v) 
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المحظورين *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المحظورين *\n', 1, 'md') 
 end 
 
 if text == 'مسح المميزين' and is_mod(msg) then  
@@ -5782,7 +5782,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID..'vip:group'..msg.chat_id_,v) 
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المميزين *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المميزين *\n', 1, 'md') 
 end 
 if text ==('مسح الادمنيه') and is_monsh(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'mods:'..msg.chat_id_) 
@@ -5794,7 +5794,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID..'mods:'..msg.chat_id_,v) 
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من الادمنيه *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من الادمنيه *\n', 1, 'md') 
 end
 if text ==('مسح المدراء') and is_owner(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'modergroup'..msg.chat_id_) 
@@ -5806,7 +5806,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID..'modergroup'..msg.chat_id_,v) 
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المدراء *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المدراء *\n', 1, 'md') 
 end 
 if text == 'مسح المنشئين' and is_sudo(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'moder'..msg.chat_id_) 
@@ -5818,7 +5818,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID..'moder'..msg.chat_id_,v) 
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المنشئين *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المنشئين *\n', 1, 'md') 
 end
 
 if text == 'مسح المميزين عام' and is_devtaha(msg) then    
@@ -5831,7 +5831,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID.."vip:groups",v)  
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المميزين عام *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المميزين عام *\n', 1, 'md') 
 end
 if text == 'مسح المطورين' and is_devtaha(msg) then   
 local list = VEERBOT:smembers(VEER_ID..'sudo:bot')  
@@ -5843,7 +5843,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID.."sudo:bot",v)  
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المطورين *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المطورين *\n', 1, 'md') 
 end
 if text == 'مسح قائمه العام' and is_devtaha(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'VEER:gbaned')  
@@ -5855,7 +5855,7 @@ for k,v in pairs(list) do
 VEERBOT:srem(VEER_ID.."VEER:gbaned",v)  
 num = num + 1
 end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑️┇تم مسح {'..num..'} من المحظورين عام *\n', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'*🗑┇تم مسح {'..num..'} من المحظورين عام *\n', 1, 'md') 
 end	 
 if text ==('رفع مميز عام') and is_devtaha(msg) then 
 function prom_reply(extra, result, success) 
