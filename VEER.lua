@@ -5116,7 +5116,7 @@ end
 end
 if text ==('تفعيل الترحيب') and is_mod(msg) then 
 VEERBOT:set(VEER_ID..'add:welc:'..msg.chat_id_,'add') 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,✔️'*┇*  تم تفعيل الترحيب', 1, 'md') 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'✔️*┇*  تم تفعيل الترحيب', 1, 'md') 
 end
 if text ==('تعطيل الترحيب') and is_mod(msg) then 
 VEERBOT:set(VEER_ID..'add:welc:'..msg.chat_id_,'rem') 
