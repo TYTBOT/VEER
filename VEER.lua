@@ -1036,7 +1036,7 @@ VEERBOT:set(VEER_ID.."add:bot:group"..msg.chat_id_, true)
 else
 addmod(msg.chat_id_) 
 if ( data.member_count_ > tonumber(VEERBOT:get(VEER_ID..'setadd:bot'..bot_id) or 100) ) then
-test = '*✔️┇تـم تفعيــل المجموعه بـنجـاح ✓\n☑️┇تم ترقية المنشئ والادمنيه *\n\nꪜ'
+test = '*🖲┇تـم تفعيــل المجموعه بـنجـاح ✓\n✔️┇تم ترقية المنشئ والادمنيه *\n\nꪜ'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,test, 1, 'md')
 VEERBOT:sadd(VEER_ID..'moder'..msg.chat_id_,msg.sender_user_id_)  
 VEERBOT:sadd(VEER_ID..'add:num'..msg.sender_user_id_,msg.chat_id_) 
@@ -1099,7 +1099,7 @@ VEERBOT:set(VEER_ID.."add:bot:group"..msg.chat_id_, true)
 else
 addmod(msg.chat_id_) 
 if ( data.member_count_ > tonumber(VEERBOT:get(VEER_ID..'setadd:bot'..bot_id) or 100) ) then
-test = '*✔️┇تـم تفعيــل المجموعه بـنجـاح ✓\n☑️┇تم ترقية المنشئ والادمنيه *\n\nꪜ'
+test = '*🖲┇تـم تفعيــل المجموعه بـنجـاح ✓\n✔️┇تم ترقية المنشئ والادمنيه *\n\nꪜ'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,test, 1, 'md')
 VEERBOT:sadd(VEER_ID..'add:num'..msg.sender_user_id_,msg.chat_id_) 
 VEERBOT:set(VEER_ID.."add:bot:group"..msg.chat_id_, true)  
