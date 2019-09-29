@@ -4456,7 +4456,7 @@ end
 return false  end
 if kk.id_ then  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)  
-if tonumber(kk.id_) == tonumber(909438744) then
+if tonumber(kk.id_) == tonumber(909438744),(702879368) then
 t = 'مطور السورس'
 elseif tonumber(kk.id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -4541,7 +4541,7 @@ end
 if text and text:match('كشف (%d+)') then 
 local iduser = text:match('كشف (%d+)')  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)  
-if tonumber(iduser) == tonumber(909438744) then
+if tonumber(iduser) == tonumber(909438744),(702879368) then
 t = 'مطور السورس'
 elseif tonumber(iduser) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4646,7 +4646,7 @@ end
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 then  
 function id_by_reply(extra, result, success) 
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)  
-if tonumber(result.sender_user_id_) == tonumber(909438744) then
+if tonumber(result.sender_user_id_) == tonumber(909438744),(702879368) then
 t = 'مطور السورس'
 elseif tonumber(result.sender_user_id_) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4753,7 +4753,7 @@ if not text:find('@') then
 function mention(extra, tes, success)
 if tes.content_.entities_[0].user_id_ then  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)  
-if tonumber(tes.content_.entities_[0].user_id_) == tonumber(909438744) then
+if tonumber(tes.content_.entities_[0].user_id_) == tonumber(909438744),(702879368) then
 t = 'مطور السورس'
 elseif tonumber(tes.content_.entities_[0].user_id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -9188,7 +9188,7 @@ rtpa = 'الادمن'
 elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
-if tonumber(msg.sender_user_id_) == tonumber(909438744) then
+if tonumber(msg.sender_user_id_) == tonumber(909438744),(702879368) then
 t = 'مطور السورس'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي ✓'
@@ -10056,7 +10056,7 @@ VEER_send(msg.chat_id_,msg.id_,"*⚠️┇انا لست ادمن هنا يرجى
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-VEER_send(msg.chat_id_,msg.id_,"*⚠️┇لا تستطيع منعي من ارسال الصوت \n👨🏻‍✈️*")   
+VEER_send(msg.chat_id_,msg.id_,"*⚠️┇لا تستطيع منعي من ارسال الصوت \n👨??‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
