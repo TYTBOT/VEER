@@ -2762,6 +2762,9 @@ monsend(msg,msg.chat_id_,'👤┇اهــلا عـزيـزي {'..get_rtba(msg)..
 elseif text == 'قفل الروابط بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 VEERBOT:set(VEER_ID.."lock:Link"..msg.chat_id_,'ktm')  
 monsend(msg,msg.chat_id_,'👤┇اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n✔️┇تـم قفـل الروابط بالكتم \n✓',msg.sender_user_id_)  
+elseif text == 'قفل تعديل الميديا بالطرد' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
+VEERBOT:set(VEER_ID..'lock:edit:media'..msg.chat_id__,'kick') 
+monsend(msg,msg.chat_id_,'👤┇اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n✔️┇تـم قفـل تعديل الميديا بالطرد \n✓',msg.sender_user_id_)
 elseif text == 'قفل الروابط بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 VEERBOT:set(VEER_ID.."lock:Link"..msg.chat_id_,'kick')  
 monsend(msg,msg.chat_id_,'👤┇اهــلا عـزيـزي {'..get_rtba(msg)..'} ✓\n✔️┇تـم قفـل الروابط بالطرد \n✓',msg.sender_user_id_)  
@@ -3990,7 +3993,7 @@ return false
 end
 end
 --======================
-if text == 'جلب نسخه الكروبات' and tonumber(msg.sender_user_id_) and is_devtaha(msg) then 
+if text == 'جلب نسخه احتياطيه' and tonumber(msg.sender_user_id_) and is_devtaha(msg) then 
 local list = VEERBOT:smembers(VEER_ID..'botgps')
 local t = '{"BOT_ID": '..VEER_ID..',"GP_BOT":{'  
 for k,v in pairs(list) do   
