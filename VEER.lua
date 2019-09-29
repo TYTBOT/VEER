@@ -9188,7 +9188,7 @@ rtpa = 'الادمن'
 elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
-if tonumber(msg.sender_user_id_) == tonumber('909438744'702879368') then
+if tonumber(msg.sender_user_id_) == tonumber(909438744) then
 t = 'مطور السورس'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي ✓'
