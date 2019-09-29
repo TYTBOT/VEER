@@ -4541,10 +4541,10 @@ end
 if text:match("^رفع ادمن بالكروب$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local faeder_res = user_info_
+local VEER_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب » *', 1, 'md')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..VEER_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب » *', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
@@ -4552,10 +4552,10 @@ end
 if text:match("^تنزيل ادمن بالكروب$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local faeder_res = user_info_
+local VEER_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *ادمن الكروب* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم تنزيله « عضو » *', 1, 'md')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '👤╿❯ *ادمن الكروب* « ['..VEER_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم تنزيله « عضو » *', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
@@ -4563,10 +4563,10 @@ end
 if text:match("^رفع بكل الصلاحيات$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local faeder_res = user_info_
+local VEER_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب بكل الصلاحيات »\n👤╿❯ صلاحياته الان •\n☑️┊❯ تغيير اسم المجموعه •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️┊❯ تثبيت الرسائل •\n☑️╽❯ اضافه مشرفين •*', 1, 'md')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..VEER_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب بكل الصلاحيات »\n👤╿❯ صلاحياته الان •\n☑️┊❯ تغيير اسم المجموعه •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️┊❯ تثبيت الرسائل •\n☑️╽❯ اضافه مشرفين •*', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
@@ -4574,10 +4574,10 @@ end
 if text:match("^الغاء خاصيه تغيير الاسم$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local faeder_res = user_info_ 
+local VEER_res = user_info_ 
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم الغاء « خاصيه تغيير الاسم »\n👤╿❯ صلاحياته الان •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️╽❯ تثبيت الرسائل •*', 1, 'md')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..VEER_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم الغاء « خاصيه تغيير الاسم »\n👤╿❯ صلاحياته الان •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️╽❯ تثبيت الرسائل •*', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
@@ -4585,10 +4585,10 @@ end
 if text:match("^الغاء خاصيه التثبيت$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local faeder_res = user_info_ 
+local VEER_res = user_info_ 
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=false&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم الغاء « خاصيه التثبيت »\n👤╿❯ صلاحياته الان •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •*', 1, 'md')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..VEER_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم الغاء « خاصيه التثبيت »\n👤╿❯ صلاحياته الان •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •*', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
