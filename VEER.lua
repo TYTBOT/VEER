@@ -4456,7 +4456,7 @@ end
 return false  end
 if kk.id_ then  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)  
-if tonumber(kk.id_) == tonumber(909438744) then
+if tonumber(kk.id_) == tonumber(909438744,702879368) then
 t = 'مطور السورس'
 elseif tonumber(kk.id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -4538,65 +4538,10 @@ end
 end,nil)
 return false 
 end
-if text:match("^رفع ادمن بالكروب$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
-function promote_by_reply(extra, result, success)
-local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local taha_res = user_info_
-if user_info_ then
-HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-taha1(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..taha_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_taha(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب » *', 1, 'md')
-end
-end
-getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
-end
-if text:match("^تنزيل ادمن بالكروب$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
-function promote_by_reply(extra, result, success)
-local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local taha_res = user_info_
-if user_info_ then
-HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
-taha1(msg.chat_id_, msg.id_, 1, '👤╿❯ *ادمن الكروب* « ['..taha_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_taha(msg)..' »*\n☑️╽❯ *تم تنزيله « عضو » *', 1, 'md')
-end
-end
-getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
-end 
-if text:match("^رفع بكل الصلاحيات$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
-function promote_by_reply(extra, result, success)
-local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local taha_res = user_info_
-if user_info_ then
-HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
-taha1(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..taha_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_taha(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب بكل الصلاحيات »\n👤╿❯ صلاحياته الان •\n☑️┊❯ تغيير اسم المجموعه •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️┊❯ تثبيت الرسائل •\n☑️╽❯ اضافه مشرفين •*', 1, 'md')
-end
-end
-getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
-end
-if text:match("^الغاء خاصيه تغيير الاسم$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
-function promote_by_reply(extra, result, success)
-local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local taha_res = user_info_ 
-if user_info_ then
-HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-taha1(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..taha_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_taha(msg)..' »*\n☑️╽❯ *تم الغاء « خاصيه تغيير الاسم »\n👤╿❯ صلاحياته الان •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️╽❯ تثبيت الرسائل •*', 1, 'md')
-end
-end
-getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
-end
-if text:match("^الغاء خاصيه التثبيت$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
-function promote_by_reply(extra, result, success)
-local user_info_ = VEERBOT:get(VEER_ID..'user:Name' .. result.sender_user_id_)
-local taha_res = user_info_ 
-if user_info_ then
-HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=false&can_promote_members=false")
-taha1(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..taha_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_taha(msg)..' »*\n☑️╽❯ *تم الغاء « خاصيه التثبيت »\n👤╿❯ صلاحياته الان •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •*', 1, 'md')
-end
-end
-getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
-end
 if text and text:match('كشف (%d+)') then 
 local iduser = text:match('كشف (%d+)')  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)  
-if tonumber(iduser) == tonumber(909438744) then
+if tonumber(iduser) == tonumber(909438744,702879368) then
 t = 'مطور السورس'
 elseif tonumber(iduser) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4701,7 +4646,7 @@ end
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 then  
 function id_by_reply(extra, result, success) 
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)  
-if tonumber(result.sender_user_id_) == tonumber(909438744) then
+if tonumber(result.sender_user_id_) == tonumber(909438744,702879368) then
 t = 'مطور السورس'
 elseif tonumber(result.sender_user_id_) == tonumber(bot_id) then
 t = 'هاذا البوت'
@@ -4808,7 +4753,7 @@ if not text:find('@') then
 function mention(extra, tes, success)
 if tes.content_.entities_[0].user_id_ then  
 local msgss = tonumber(VEERBOT:get(VEER_ID..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)  
-if tonumber(tes.content_.entities_[0].user_id_) == tonumber(909438744) then
+if tonumber(tes.content_.entities_[0].user_id_) == tonumber(909438744,702879368) then
 t = 'مطور السورس'
 elseif tonumber(tes.content_.entities_[0].user_id_) == tonumber(bot_id) then
 t = 'هاذا بوت'
@@ -9243,7 +9188,7 @@ rtpa = 'الادمن'
 elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
-if tonumber(msg.sender_user_id_) == tonumber(909438744) then
+if tonumber(msg.sender_user_id_) == tonumber(909438744,702879368) then
 t = 'مطور السورس'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي ✓'
