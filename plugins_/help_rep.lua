@@ -1587,7 +1587,7 @@ taha = [[
   
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
 
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1630,7 +1630,7 @@ taha = [[
 
  ⚜️ ┇للمزيد من المعلومات راسلنا  ࿈
  
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1658,7 +1658,7 @@ taha = [[
 
 ⚜️┇ للمزيد من المعلومات راسلنا  ࿈
 
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1712,7 +1712,7 @@ taha = [[
 📨┇ المكتومين •
    ➖➖➖➖➖➖➖➖➖➖
 ⚜️┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1759,7 +1759,7 @@ taha = [[
 📬 ┇ تفعيل ‹› تعطيل » الردود بالرد 
     ➖➖➖➖➖➖➖➖➖➖
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1782,7 +1782,7 @@ taha = [[
 📓 ┇ ضع اسمہ + الاسم التريدهۂ
     ➖➖➖➖➖➖➖➖➖➖
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1801,7 +1801,7 @@ taha = [[
 🏵 ┇ مسح المنشئين – المنشئين !
    ➖➖➖➖➖➖➖➖➖➖
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1886,7 +1886,7 @@ taha = [[
 📂 ┇ تعطيل ملف + اسم الملف
    ➖➖➖➖➖➖➖➖➖➖
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1908,7 +1908,7 @@ taha = [[
 📬 ┇ الجهات ‹› السيلفي 
    ➖➖➖➖➖➖➖➖➖➖
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1931,7 +1931,7 @@ taha = [[
 🌀 ┇ الجهات ‹› السيلفي 
    ➖➖➖➖➖➖➖➖➖➖
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1954,7 +1954,7 @@ taha = [[
 ⚜ ┇ الجهات ‹› السيلفي 
    ➖➖➖➖➖➖➖➖➖➖
 ⚜️ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
@@ -1985,7 +1985,7 @@ taha = [[
 💢 ┇ تفعيل «» تعطيل » الحظر 
    ➖➖➖➖➖➖➖➖➖➖
 ⚜ ┇ للمزيد من المعلومات راسلنا  ࿈
-🗃 ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
+👮‍♂ ┇ مطور البوت »* []] ..SUDOUSERNAME..[[]
 ]]
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
