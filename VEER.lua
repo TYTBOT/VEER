@@ -3100,7 +3100,7 @@ end
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 print(text)
 end
-tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
+tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200},tall,nil)
 end
 if text and text == 'تغير كليشه الترحيب' and is_devtaha(msg)  then    
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*🚸┇حسنآ ارسل لي نص الترحيب *\n', 1, 'md')   
