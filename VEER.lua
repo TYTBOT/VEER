@@ -6689,7 +6689,7 @@ end
 end
 end,nil)   
 end
-if text ==('رفع مطور') and is_devtaha(msg) then 
+if text ==('رفع مطور') and is_devtaha(msg) or text ==('اضف مطور') and is_devtaha(msg) then 
 function prom_reply(extra, result, success) 
 tdcli_function ({
 ID = "GetUser",
