@@ -2054,7 +2054,7 @@ if text and text:match("^ضع كليشه المطور 🎐$") and is_devtaha(msg
 if text and text:match("^ضع كليشه ستارت 📠$") and is_devtaha(msg) then VEERBOT:setex(VEER_ID.."start:msgofstart" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  VEER_sendMsg(msg.chat_id_, msg.id_, 1,'📟*┇* ارسل لي النص الذي تريده ', 1, 'md') end 
 if text == 'تفعيل رساله الترحيب 🎌' and is_devtaha(msg) then local  taha = '*⚠️┇*تم تفعيل رسالة ترحيب عند الاضافه  ✔' VEER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") VEERBOT:del(VEER_ID..'lock:klsh:add'..bot_id) end 
 if text == 'تعطيل رساله الترحيب 📱' and is_devtaha(msg) then taha = '*⚠️┇*تم تعطيل رسالة ترحيب عند الاضافه  ❌' VEER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") VEERBOT:set(VEER_ID..'lock:klsh:add'..bot_id,true) end
-if text == "حذف رد التواصل 🔧" and is_devtaha(msg) then  VEERBOT:del(VEER_ID.."pvstart") VEER_sendMsg( msg.chat_id_, msg.id_, 1, '*⚠️┇*تم حذف رد التوصل', 1, "md") end 
+if text == "حذف رد التواصل 📌" and is_devtaha(msg) then  VEERBOT:del(VEER_ID.."pvstart") VEER_sendMsg( msg.chat_id_, msg.id_, 1, '*⚠️┇*تم حذف رد التوصل', 1, "md") end 
 if text == "حذف كليشه ستارت 🃏" and is_devtaha(msg) then  VEERBOT:del(VEER_ID.."start:msgofstart1") VEER_sendMsg( msg.chat_id_, msg.id_, 1, '*⚠️┇*تم حذف كليشه ستارت', 1, "md") end 
 if text == "حذف كليشه المطور 🀄" and is_devtaha(msg) then  VEERBOT:del(VEER_ID.."dev") VEER_sendMsg( msg.chat_id_, msg.id_, 1, '*⚠️┇*تم حذف كليشه المطور', 1, "md") end 
 if text and text:match("^ضع عدد الاعضاء 📜$") and is_devtaha(msg) then  VEERBOT:setex(VEER_ID.."numadd:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  local t = '*📊┇ارسل لي العدد الان*'  VEER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') end
@@ -3055,23 +3055,6 @@ VEERBOT:setex(VEER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 
 local t = '*📃┇* ارسل النص الذي تريده '  
 local tt = '\n*📟┇* ايضا يمكنك وضع \n*⚠️┇* دالة طباعه الاسم `name` \n*⚠️┇* ودالة طباعه اسم المجموعه `ngp`'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,t..tt, 1, 'md') 
-end
-if text and text == "تاك للكل" then
-function tall(f1, f2)
-local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
-i = 0
-for k, v in pairs(f2.members_) do
-i = i + 1
-local user_info = VEERBOT:hgetall('user:'..v.user_id_)  
-if user_info and user_info.username then
-local username = user_info.username
-text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
-end
-end 
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
-print(text)
-end
-tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
 end
 if text and text == 'تغير كليشه الترحيب' and is_devtaha(msg)  then    
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*🚸┇حسنآ ارسل لي نص الترحيب *\n', 1, 'md')   
