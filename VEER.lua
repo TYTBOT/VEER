@@ -940,6 +940,18 @@ end
 return VEER_sendMsg(msg.chat_id_, msg.id_, 1,pre_msg, 1, 'md')  
 end
 
+function getChats(offset_order, offset_chat_id, limit, cb, cmd)
+if not limit or limit > 20 then
+limit = 20
+end
+tdcli_function ({
+ID = "GetChats",
+offset_order_ = offset_order or 9223372036854775807,
+offset_chat_id_ = offset_chat_id or 0,
+limit_ = limit
+}, cb or dl_cb, cmd)
+end
+
 function match_plugin(msg, CMD, plugin, plugin_name)
 MSG_TEXT = Tepy_Text(CMD, text)
 if MSG_TEXT then
@@ -3055,6 +3067,40 @@ VEERBOT:setex(VEER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 
 local t = '*📃┇* ارسل النص الذي تريده '  
 local tt = '\n*📟┇* ايضا يمكنك وضع \n*⚠️┇* دالة طباعه الاسم `name` \n*⚠️┇* ودالة طباعه اسم المجموعه `ngp`'
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,t..tt, 1, 'md') 
+end
+if text and text == "تاك للكل" then
+function tall(f1, f2)
+local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
+i = 0
+for k, v in pairs(f2.members_) do
+i = i + 1
+local user_info = kasperdx1:VEERBOT('user:'..v.user_id_)  
+if user_info and user_info.username then
+local username = user_info.username
+text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
+end
+end 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+print(text)
+end
+tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
+end
+if text and text == "تاك للكل" then
+function tall(f1, f2)
+local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
+i = 0
+for k, v in pairs(f2.members_) do
+i = i + 1
+local user_info = VEERBOT:hgetall('user:'..v.user_id_)  
+if user_info and user_info.username then
+local username = user_info.username
+text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
+end
+end 
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+print(text)
+end
+tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
 end
 if text and text == 'تغير كليشه الترحيب' and is_devtaha(msg)  then    
 VEER_sendMsg(msg.chat_id_, msg.id_, 1, '*🚸┇حسنآ ارسل لي نص الترحيب *\n', 1, 'md')   
