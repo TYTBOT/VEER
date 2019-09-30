@@ -9260,12 +9260,12 @@ elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
  end
 if result.username_ then 
-username = '\n🎫┇مـعرفك ¤ (@'..result.username_..')' 
+username = '\n🎫┇  مـعرفك • (@'..result.username_..')' 
 else 
 username = '' 
 end
 if result.username_ then 
-usernamee = '\n🎫┇مـعرفك ¤ ([@'..result.username_..'])' 
+usernamee = '\n🎫┇  مـعرفك •  ([@'..result.username_..'])' 
 else usernamee = '' 
 end
 if result.username_ then 
@@ -9306,12 +9306,12 @@ end
 end
 else
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'🎥┇'..Text_Photo..'\n🎟┇ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🛰┇موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🗃┇موقع الكروب ¤ ('..rtpa..')\n📓┇تفاعـلك ¤ ('..formsgg(msguser)..')\n📖┇رسائلك ¤ ('..(msguser)..')\n🖼┇صورك ¤ ('..taha.total_count_..')\n💰┇نقودك ¤ ('..NUMPGAME..')\n📞┇جهاتك ¤ ('..addmempar..')')       
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'🎥┇  '..Text_Photo..'\n🎟┇  ايديــك •  '..msg.sender_user_id_..' '..username..'\n🛰┇  موقعـك •  '..get_rtpa(msg.chat_id_,msg.sender_user_id_)..'\n🗃┇  موقع الكروب •  '..rtpa..'\n📓┇  تفاعـلك •  ('..formsgg(msguser)..')\n📖┇  رسائلك •  ('..(msguser)..')\n🖼┇  صورك •  ('..taha.total_count_..')\n💰┇  نقودك •  ('..NUMPGAME..')\n📞┇  جهاتك •  ('..addmempar..')')       
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🎟┇ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🛰┇موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🗃┇موقع الكروب ¤ ('..rtpa..')\n📓┇تفاعـلك ¤ ('..formsgg(msguser)..')\n📖┇رسائلك ¤ ('..(msguser)..')\n💰┇نقودك ¤ ('..NUMPGAME..')\n📞┇جهاتك ¤ ('..addmempar..')'..'\n🌇┇ لا يمكنني عرض صورتك لانك قمت بحظر البوت', 1, 'html')   
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🎟┇  ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🛰┇  موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🗃┇  موقع الكروب ¤ ('..rtpa..')\n📓┇  تفاعـلك ¤ ('..formsgg(msguser)..')\n📖┇  رسائلك ¤ ('..(msguser)..')\n💰┇  نقودك ¤ ('..NUMPGAME..')\n📞┇  جهاتك ¤ ('..addmempar..')'..'\n🌇┇ لا يمكنني عرض صورتك لانك قمت بحظر البوت', 1, 'html')   
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1, '\n📷┇ليس لديك صور في حسابك ✓'..'\n🎟┇ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🛰┇موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🗃┇موقع الكروب ¤ ('..rtpa..')\n📓┇تفاعـلك ¤ ('..formsgg(msguser)..')\n📖┇رسائلك ¤ ('..(msguser)..')\n💰┇نقودك ¤ ('..NUMPGAME..')\n📞┇جهاتك ¤ ('..addmempar..')',1, 'html')      
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, '\n📷┇ليس لديك صور في حسابك ✓'..'\n🎟┇  ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🛰┇  موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🗃┇  موقع الكروب ¤ ('..rtpa..')\n📓┇  تفاعـلك ¤ ('..formsgg(msguser)..')\n📖┇  رسائلك ¤ ('..(msguser)..')\n💰┇  نقودك ¤ ('..NUMPGAME..')\n📞┇  جهاتك ¤ ('..addmempar..')',1, 'html')      
 end 
 end
 end
@@ -9321,7 +9321,7 @@ local get_id_text = VEERBOT:get(VEER_ID.."KLISH:ID")
 if get_id_text then
 VEER_sendMsg(msg.chat_id_, msg.id_, 1,get_id(msg,taha,get_id_text), 1, 'html')   
 else
-VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🎟┇ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🛰┇موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🗃┇موقع الكروب ¤ ('..rtpa..')\n📓┇تفاعـلك ¤ ('..formsgg(msguser)..')\n📖┇رسائلك ¤ ('..(msguser)..')\n💰┇نقودك ¤ ('..NUMPGAME..')\n📞┇جهاتك ¤ ('..addmempar..')', 1, 'html')   
+VEER_sendMsg(msg.chat_id_, msg.id_, 1,'🎟┇  ايديــك ¤ ('..msg.sender_user_id_..')'..username..'\n🛰┇  موقعـك ¤ ('..get_rtpa(msg.chat_id_,msg.sender_user_id_)..')\n🗃┇  موقع الكروب ¤ ('..rtpa..')\n📓┇  تفاعـلك ¤ ('..formsgg(msguser)..')\n📖┇  رسائلك ¤ ('..(msguser)..')\n💰┇  نقودك ¤ ('..NUMPGAME..')\n📞┇  جهاتك ¤ ('..addmempar..')', 1, 'html')   
 end
 end
 end
