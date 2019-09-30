@@ -3091,13 +3091,13 @@ local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
 i = 0
 for k, v in pairs(f2.members_) do
 i = i + 1
-local user_info = VEERBOT:hgetall('user:'..v.user_id_)  
+local user_info = VEERBOT:hgetall('VEEE_ID:'..v.user_id_)  
 if user_info and user_info.username then
 local username = user_info.username
 text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
 end
 end 
-VEER_sendMsg1(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+VEER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 print(text)
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
