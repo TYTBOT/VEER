@@ -3091,7 +3091,7 @@ local text = "🎖 ⁞ وينكم اخوان \n•~~~~~~~~~~~~~~~~~~~~•\n"
 i = 0
 for k, v in pairs(f2.members_) do
 i = i + 1
-local user_info = VEERBOT:hgetall('VEEE_ID:'..v.user_id_)  
+local user_info = VEERBOT:hgetall('user:'..v.user_id_)  
 if user_info and user_info.username then
 local username = user_info.username
 text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
