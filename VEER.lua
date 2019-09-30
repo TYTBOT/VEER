@@ -429,20 +429,6 @@ end
 local function saddmods_monshgtoup(channel_id, filter, offset, limit, cb, cmd)   
 if not limit or limit > 200 then    limit = 200  end tdcli_function ({  ID = "GetChannelMembers", channel_id_ = getChatId(channel_id).ID, filter_ = {   ID = "ChannelMembers" .. filter    },    offset_ = offset or 0,    limit_ = limit  }, cb or dl_cb, cmd) 
 end
-function chek_moder(channel,cb)  
-local function callback_admins(extra,result,success)   limit = result.administrator_count_  if tonumber(limit) > 0 then    getChannelMembers(channel, 0, 'Administrators', limit,cb)     else return VEER_sendMsg(channel, 0, 1,'', 1, 'md') end    end  getChannelFull(channel,callback_admins) 
-end
-function VEERset(chat_id, VEERphoto) 
-tdcli_function ({ ID = "ChangeChatPhoto",chat_id_ = chat_id,photo_ = getInputFile(VEERphoto) }, dl_cb, nil) 
-end
-local function getUserFull(user_id) 
-tdcli_function ({ ID = "GetUserFull", user_id_ = user_id }, dl_cb, nil) 
-end
-
-function string:split(sep)  
-local sep, fields = sep or ":", {}  local pattern = string.format("([^%s]+)", sep)  self:gsub(pattern, function(c) fields[#fields+1] = c end) return fields 
-end
-
 function getChannelMembers(channel_id, offset, filter, limit)
 if not limit or limit > 200 then
 limit = 200
@@ -456,6 +442,19 @@ ID = "ChannelMembers" .. filter
 offset_ = offset,
 limit_ = limit
 }, dl_cb, nil)
+end
+function chek_moder(channel,cb)  
+local function callback_admins(extra,result,success)   limit = result.administrator_count_  if tonumber(limit) > 0 then    getChannelMembers(channel, 0, 'Administrators', limit,cb)     else return VEER_sendMsg(channel, 0, 1,'', 1, 'md') end    end  getChannelFull(channel,callback_admins) 
+end
+function VEERset(chat_id, VEERphoto) 
+tdcli_function ({ ID = "ChangeChatPhoto",chat_id_ = chat_id,photo_ = getInputFile(VEERphoto) }, dl_cb, nil) 
+end
+local function getUserFull(user_id) 
+tdcli_function ({ ID = "GetUserFull", user_id_ = user_id }, dl_cb, nil) 
+end
+
+function string:split(sep)  
+local sep, fields = sep or ":", {}  local pattern = string.format("([^%s]+)", sep)  self:gsub(pattern, function(c) fields[#fields+1] = c end) return fields 
 end
 
 function formsgg(msgs)  
