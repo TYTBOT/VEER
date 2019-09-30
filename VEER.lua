@@ -429,20 +429,6 @@ end
 local function saddmods_monshgtoup(channel_id, filter, offset, limit, cb, cmd)   
 if not limit or limit > 200 then    limit = 200  end tdcli_function ({  ID = "GetChannelMembers", channel_id_ = getChatId(channel_id).ID, filter_ = {   ID = "ChannelMembers" .. filter    },    offset_ = offset or 0,    limit_ = limit  }, cb or dl_cb, cmd) 
 end
-function getChannelMembers(channel_id, offset, filter, limit)
-if not limit or limit > 200 then
-limit = 200
-end
-tdcli_function ({
-ID = "GetChannelMembers",
-channel_id_ = getChatId(channel_id).ID,
-filter_ = {
-ID = "ChannelMembers" .. filter
-},
-offset_ = offset,
-limit_ = limit
-}, dl_cb, nil)
-end
 function chek_moder(channel,cb)  
 local function callback_admins(extra,result,success)   limit = result.administrator_count_  if tonumber(limit) > 0 then    getChannelMembers(channel, 0, 'Administrators', limit,cb)     else return VEER_sendMsg(channel, 0, 1,'', 1, 'md') end    end  getChannelFull(channel,callback_admins) 
 end
@@ -952,18 +938,6 @@ pre_msg = plugin.VEER_TEXT(msg)
 end
 end
 return VEER_sendMsg(msg.chat_id_, msg.id_, 1,pre_msg, 1, 'md')  
-end
-
-function getChats(offset_order, offset_chat_id, limit, cb, cmd)
-if not limit or limit > 20 then
-limit = 20
-end
-tdcli_function ({
-ID = "GetChats",
-offset_order_ = offset_order or 9223372036854775807,
-offset_chat_id_ = offset_chat_id or 0,
-limit_ = limit
-}, cb or dl_cb, cmd)
 end
 
 function match_plugin(msg, CMD, plugin, plugin_name)
