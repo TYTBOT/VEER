@@ -443,6 +443,21 @@ function string:split(sep)
 local sep, fields = sep or ":", {}  local pattern = string.format("([^%s]+)", sep)  self:gsub(pattern, function(c) fields[#fields+1] = c end) return fields 
 end
 
+function getChannelMembers(channel_id, offset, filter, limit)
+if not limit or limit > 200 then
+limit = 200
+end
+tdcli_function ({
+ID = "GetChannelMembers",
+channel_id_ = getChatId(channel_id).ID,
+filter_ = {
+ID = "ChannelMembers" .. filter
+},
+offset_ = offset,
+limit_ = limit
+}, dl_cb, nil)
+end
+
 function formsgg(msgs)  
 local taha = ''  
 if msgs < 100 then 
