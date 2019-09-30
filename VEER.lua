@@ -3097,7 +3097,7 @@ local username = user_info.username
 text = text.."<b>• "..i.." ⁞</b> { @"..username.." }\n"
 end
 end 
-faederdx1(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+VEER_sendMsg1(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 print(text)
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
