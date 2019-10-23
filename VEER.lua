@@ -8939,7 +8939,7 @@ taha = '*🔰┇بالتاكيد تم تعطيل البوت التواصل  *\n�
 VEER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
-text == 'تفعيل الرفع' and is_monsh(msg) then   
+if text == 'تفعيل الرفع' and is_monsh(msg) then   
 if VEERBOT:get(VEER_ID..'lock:set'..msg.chat_id_)  then
 taha = '*✔️┇تم تفعيل { فع الادمنيه و المميزين } *\n✓' 
 VEER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
